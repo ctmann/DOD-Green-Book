@@ -21,14 +21,21 @@ library(readr)
 
 #' # Import  Data ------------------------------------------------------------
 
-# Create filename for import purposes
-# Note: Data is unzipped and stored in a Data/Raw subfolder as an Excel doc
+#Create Temporary Scaffolding
+my.temporary.zipped.file <- tempfile()
+my.temporarary.zipped.folder <- tempdir()
 
-filename <- "../Data/Raw/FY17 PB Green Book Chap 5.xlsx"
+# Declare Source Data Origin
+url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
+spreadsheet.name <- "FY17 PB Green Book Chap 5.xlsx"
 
+#Download Source Data to Temp Location
+download(url = url, dest = my.temporary.zipped.file)
+unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
 
-# Examine Workbook before importing
-#excel_sheets(filename)[1]
+# Create Name of extracted file
+filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
+
 
 # Import tbl 5-1 on sheet 1 of workbook
 econ.deflator <- read_excel(path = filename, sheet = 1, skip = 3)

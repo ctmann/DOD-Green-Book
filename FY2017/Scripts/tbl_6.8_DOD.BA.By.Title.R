@@ -11,13 +11,27 @@ library(tidyr)
 library(dplyr)
 library(readxl)
 library(stringr)
+library(readr)
 
 # Import  Data ------------------------------------------------------------
 
-# Create filename for import purposes
-# Note: Data is unzipped and stored in a Data/Raw subfolder as an Excel doc
+#Create Temporary Scaffolding
+my.temporary.zipped.file <- tempfile()
+my.temporarary.zipped.folder <- tempdir()
 
-filename <- "../Data/Raw/FY17 6-8_DoD BA by Title.xlsx"
+# Declare Source Data Origin
+url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
+spreadsheet.name <- "FY17 PB Green Book Chap 6/FY17 6-8_DoD BA by Title.xlsx"
+
+#Download Source Data to Temp Location
+download(url = url, dest = my.temporary.zipped.file)
+unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
+
+# Create Name of extracted file
+filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
+
+
+# Reshape -----------------------------------------------------------------
 
 #excel_sheets(filename)
 df.raw <- read_excel(filename, skip = 4)

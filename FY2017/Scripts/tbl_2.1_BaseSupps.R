@@ -33,6 +33,8 @@ unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
 filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
 
 
+# Reshape -----------------------------------------------------------------
+
 #Import  There are 15 sheets but only the first 14 have data. The last is for notes.
 t <-  lapply(excel_sheets(filename)[1:14], read_excel, path = filename, col_names = F, skip = 5 )
 

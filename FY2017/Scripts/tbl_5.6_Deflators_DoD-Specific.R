@@ -19,12 +19,23 @@ library(ggplot2)
 
 #' # Import  Data ------------------------------------------------------------
 
-# Create filename for import purposes
-# Note: Data is unzipped and stored in a Data/Raw subfolder as an Excel doc
-filename <- "../Data/Raw/FY17 PB Green Book Chap 5.xlsx"
+#Create Temporary Scaffolding
+my.temporary.zipped.file <- tempfile()
+my.temporarary.zipped.folder <- tempdir()
 
-# Examine file
-#excel_sheets(filename)[6]
+# Declare Source Data Origin
+url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
+spreadsheet.name <- "FY17 PB Green Book Chap 5.xlsx"
+
+#Download Source Data to Temp Location
+download(url = url, dest = my.temporary.zipped.file)
+unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
+
+# Create Name of extracted file
+filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
+
+
+# Reshape -----------------------------------------------------------------
 
 # Import tbl 5-5 on sheet 6 of workbook
 dod.deflator <- tbl_df(read_excel(path = filename, sheet = 6, skip = 4))
