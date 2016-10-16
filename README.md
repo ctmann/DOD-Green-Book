@@ -11,5 +11,7 @@ R Tidied and Cleaned National Defense Budget Estimates
 Raw data in DATA/RAW subfolder is cleaned and tidied from original online source and exported as .csv file to DATA/Processed subfolder.
 
 ## To Do
-* The compressed .xls tables have been unzipped and stored in the DATA/RAW folder as a matter of convenience. Ideally, all raw data would remain at the point of origin.
 * Standardize account and service data and create data definitions table.
+
+## Recent Changes
+* Unzipped .xls tables were originally stored in the DATA/RAW folder as a matter of convenience. This made the source data vulnerable to user alterations. New script downloads and unzips source data to a temporary file each time,  ensuring better data integrity. 
