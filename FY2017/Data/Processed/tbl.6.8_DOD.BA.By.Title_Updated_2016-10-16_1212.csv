@@ -1,0 +1,667 @@
+Public Law Title,FY,Amount,Deflator.Type,Source
+Military Personnel,1948,4.301e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1948,1.75e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1948,3.858e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1948,3.695e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1948,4.61e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1948,2.53e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1948,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1948,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1948,-9.43e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1949,4.507e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1949,1.93e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1949,4.191e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1949,1.745e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1949,2.42e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1949,1.27e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1949,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1949,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1949,-5.72e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1950,4.891e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1950,1.8e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1950,4.332e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1950,3.728e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1950,6.1e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1950,3.88e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1950,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1950,1.68e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1950,-2.12e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1951,8.709e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1951,3.42e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1951,1.2116e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1951,2.2257e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1951,1.254e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1951,2.471e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1951,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1951,5.74e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1951,-1.89e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1952,1.1152e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1952,3.45e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1952,1.2948e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1952,2.9367e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1952,1.755e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1952,4.037e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1952,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1952,7.75e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1952,-1.83e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1953,1.213e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1953,3.57e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1953,1.0628e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1953,2.0766e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1953,2.233e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1953,2.336e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1953,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1953,3.6e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1953,-2.06e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1954,1.1559e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1954,3.87e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1954,1.0295e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1954,9.648e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1954,2.29e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1954,3.13e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1954,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1954,1e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1954,-2.73e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1955,1.114e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1955,4.24e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1955,8.036e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1955,6.762e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1955,2.335e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1955,8.96e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1955,7.5e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1955,1.119e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1955,-3.62e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1956,1.1058e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1956,4.95e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1956,9.009e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1956,8.016e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1956,3.34e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1956,1.269e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1956,0,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1956,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1956,-3.96e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1957,1.1038e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1957,5.15e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1957,9.526e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1957,9.405e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1957,4.22e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1957,1.475e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1957,7.5e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1957,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1957,-3.39e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1958,1.0415e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1958,5.67e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1958,1.0108e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1958,9.477e+09,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1958,3.964e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1958,2.086e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1958,5.5e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1958,7.5e+07,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1958,2.24e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1959,1.0823e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1959,6.4e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1959,1.0276e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1959,1.2709e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1959,5.278e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1959,1.384e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1959,5.7e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1959,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1959,2.34e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1960,1.0881e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1960,7.15e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1960,1.0317e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1960,1.1596e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1960,5.725e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1960,1.364e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1960,3e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1960,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1960,2.79e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1961,1.0989e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1961,7.9e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1961,1.0702e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1961,1.1716e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1961,6.033e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1961,1.061e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1961,3e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1961,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1961,6.5e+07,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1962,1.179e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1962,9.2e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1962,1.1503e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1962,1.5746e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1962,6.402e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1962,7.87e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1962,4.4e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1962,3.25e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1962,1.01e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1963,1.1713e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1963,1.026e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1963,1.1496e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1963,1.6647e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1963,6.993e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1963,1.204e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1963,5.9e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1963,1e+06,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1963,-1.09e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1964,1.2655e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1964,1.228e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1964,1.1705e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1964,1.5645e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1964,6.984e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1964,9.49e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1964,6.44e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1964,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1964,-1.83e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1965,1.3257e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1965,1.399e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1965,1.2603e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1965,1.3836e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1965,6.483e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1965,1.049e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1965,6.31e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1965,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1965,-2e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1966,1.5473e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1966,1.6e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1966,1.5339e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1966,2.0013e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1966,6.746e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1966,2.566e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1966,6.66e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1966,1.383e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1966,-2.31e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1967,1.8377e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1967,1.839e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1967,1.9441e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1967,2.2871e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1967,7.172e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1967,1.098e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1967,5.07e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1967,1.014e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1967,-1.43e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1968,2.0023e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1968,2.095e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1968,2.0961e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1968,2.3408e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1968,7.285e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1968,1.543e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1968,6.12e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1968,5.16e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1968,-1.57e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1969,2.1427e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1969,2.45e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1969,2.2349e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1969,2.0543e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1969,7.629e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1969,1.168e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1969,5.12e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1969,9.61e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1969,-1.33e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1970,2.2995e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1970,2.858e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1970,2.1529e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1970,1.7867e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1970,7.406e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1970,9.6e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1970,6.04e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1970,5e+06,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1970,-1.4e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1971,2.2643e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1971,3.391e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1971,2.0437e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1971,1.5702e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1971,7.066e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1971,1.322e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1971,7.17e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1971,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1971,-1.19e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1972,2.2964e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1972,3.901e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1972,2.0804e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1972,1.7777e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1972,7.519e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1972,1.287e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1972,8.6e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1972,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1972,-1.06e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1973,2.3727e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1973,4.442e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1973,2.1735e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1973,1.7473e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1973,7.96e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1973,1.356e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1973,9.67e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1973,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1973,-1.05e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1974,2.4167e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1974,5.151e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1974,2.3958e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1974,1.7028e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1974,8.176e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1974,1.563e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1974,1.099e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1974,0,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1974,-1.52e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1975,2.4963e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1975,6.251e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1975,2.6109e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1975,1.6698e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1975,8.572e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1975,1.927e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1975,1.157e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1975,1.58e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1975,-1.74e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1976,2.543e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1976,7.326e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1976,2.8733e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1976,2.0991e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1976,9.451e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1976,2.36e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1976,1.229e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1976,1.35e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1976,-1.47e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1977,2.6118e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1977,8.238e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1977,3.2111e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1977,2.7922e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1977,1.0439e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1977,2.204e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1977,1.258e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1977,2.2e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1977,-1.72e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1978,2.7246e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1978,9.18e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1978,3.4734e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1978,2.9529e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1978,1.1371e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1978,1.641e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1978,1.346e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1978,4.23e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1978,-1.48e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1979,2.8703e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1979,1.0283e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1979,3.8038e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1979,3.1428e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1979,1.2437e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1979,2.319e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1979,1.563e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1979,7.26e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1979,-4.92e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1980,3.1014e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1980,1.1965e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1980,4.6372e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1980,3.5283e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1980,1.3561e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1980,2.293e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1980,1.526e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1980,1.336e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1980,-7.27e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1981,3.6909e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1981,1.384e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1981,5.5551e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1981,4.8025e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1981,1.6609e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1981,3.398e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1981,2.004e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1981,2.677e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1981,-6.49e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1982,4.2875e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1982,1.4986e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1982,6.2469e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1982,6.4462e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1982,2.006e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1982,4.916e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1982,2.203e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1982,2.494e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1982,-7.14e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1983,4.5688e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1983,1.6155e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1983,6.6544e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1983,8.0355e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1983,2.2798e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1983,4.512e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1983,2.712e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1983,1.075e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1983,-3.65e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1984,4.8363e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1984,1.6503e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1984,7.0953e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1984,8.6161e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1984,2.6867e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1984,4.51e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1984,2.669e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1984,2.774e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1984,-6.5e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1985,6.7773e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1985,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1985,7.7812e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1985,9.6842e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1985,3.1327e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1985,5.517e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1985,2.89e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1985,5.088e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1985,-4.47e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1986,6.7794e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1986,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1986,7.489e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1986,9.2506e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1986,3.3609e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1986,5.281e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1986,2.803e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1986,5.235e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1986,-7.29e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1987,7.401e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1987,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1987,7.961e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1987,8.0234e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1987,3.5644e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1987,5.093e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1987,3.075e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1987,2.612e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1987,-8.09e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1988,7.6584e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1988,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1988,8.1629e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1988,8.0053e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1988,3.6521e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1988,5.349e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1988,3.199e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1988,1.246e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1988,-8.27e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1989,7.8477e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1989,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1989,8.6221e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1989,7.939e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1989,3.753e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1989,5.738e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1989,3.276e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1989,8.97e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1989,-6.93e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1990,7.8876e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1990,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1990,8.8409e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1990,8.1376e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1990,3.6459e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1990,5.13e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1990,3.143e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1990,4.66e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1990,-8.59e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1991,8.4213e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1991,0,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1991,1.17234e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1991,7.174e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1991,3.6193e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1991,5.188e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1991,3.296e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1991,2.701e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1991,-4.4358e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1992,8.1221e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1992,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1992,9.3791e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1992,6.2952e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1992,3.6623e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1992,5.254e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1992,3.738e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1992,4.587e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1992,-6.283e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1993,7.5974e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1993,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1993,8.9172e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1993,5.2789e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1993,3.7974e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1993,4.554e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1993,3.941e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1993,4.503e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1993,-1.504e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1994,7.1365e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1994,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1994,8.864e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1994,4.4141e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1994,3.4567e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1994,6.009e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1994,3.501e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1994,4.054e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1994,-9.14e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1995,7.1557e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1995,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1995,9.3751e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1995,4.3647e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1995,3.4522e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1995,5.426e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1995,3.393e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1995,5.26e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1995,-1.828e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1996,6.9775e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1996,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1996,9.3658e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1996,4.2572e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1996,3.4972e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1996,6.893e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1996,4.26e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1996,3.061e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1996,-6.22e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1997,7.0338e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1997,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1997,9.2353e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1997,4.2963e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1997,3.6404e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1997,5.718e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1997,4.131e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1997,7.534e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1997,-1.436e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1998,6.9821e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1998,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1998,9.7215e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1998,4.4818e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1998,3.7089e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1998,5.466e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1998,3.828e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1998,2.591e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1998,-2.245e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,1999,7.065e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",1999,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,1999,1.04992e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,1999,5.1112e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,1999,3.829e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,1999,5.405e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,1999,3.592e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,1999,5.381e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",1999,-8.27e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2000,7.3838e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2000,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2000,1.08776e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2000,5.4973e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2000,3.8706e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2000,5.106e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2000,3.543e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2000,7.314e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2000,-1.721e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2001,7.6888e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2001,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2001,1.25238e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2001,6.2607e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2001,4.1594e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2001,5.423e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2001,3.683e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2001,5.333e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2001,-1.338e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2002,8.6957e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2002,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2002,1.33851e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2002,6.274e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2002,4.8718e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2002,6.631e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2002,4.048e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2002,4.389e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2002,-1.702e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2003,1.09062e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2003,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2003,1.78316e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2003,7.849e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2003,5.8103e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2003,6.67e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2003,4.183e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2003,4.154e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2003,-1.178e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2004,1.16111e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2004,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2004,1.89763e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2004,8.3073e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2004,6.4641e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2004,6.137e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2004,3.829e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2004,7.977e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2004,-5.21e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2005,1.21279e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2005,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2005,1.79215e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2005,9.6614e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2005,6.8825e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2005,7.26e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2005,4.098e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2005,7.88e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2005,-1.259e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2006,1.28483e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2006,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2006,2.13532e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2006,1.05371e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2006,7.2855e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2006,9.53e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2006,4.426e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2006,4.754e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2006,-2.489e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2007,1.31756e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2007,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2007,2.40252e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2007,1.33772e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2007,7.7549e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2007,1.3961e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2007,4.024e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2007,2.836e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2007,-1.905e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2008,1.39033e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2008,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2008,2.56223e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2008,1.65006e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2008,7.9567e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2008,2.2064e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2008,2.846e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2008,1.0296e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2008,-1.549e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2009,1.4929e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2009,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2009,2.71564e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2009,1.35438e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2009,8.0005e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2009,2.6815e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2009,3.848e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2009,-1.217e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2009,-1.219e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2010,1.571e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2010,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2010,2.9363e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2010,1.35817e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2010,8.0234e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2010,2.2577e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2010,2.267e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2010,5.639e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2010,-1.59e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2011,1.58389e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2011,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2011,3.05235e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2011,1.31898e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2011,7.6687e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2011,1.5991e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2011,1.833e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2011,2.832e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2011,-2.086e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2012,1.58352e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2012,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2012,2.86775e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2012,1.18316e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2012,7.2034e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2012,1.1367e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2012,1.69e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2012,7.311e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2012,-4.56e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2013,1.53531e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2013,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2013,2.58353e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2013,9.7763e+10,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2013,6.3347e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2013,8.068e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2013,1.489e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2013,4.482e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2013,-1.672e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2014,1.50186e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2014,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2014,2.62453e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2014,1.00405e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2014,6.3483e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2014,8.392e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2014,1.417e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2014,1.129e+10,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2014,-1.886e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2015,1.45859e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2015,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2015,2.46572e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2015,1.0211e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2015,6.3869e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2015,5.652e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2015,1.14e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2015,7.478e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2015,-1.837e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2016,1.45423e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2016,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2016,2.45357e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2016,1.18944e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2016,6.9274e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2016,6.91e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2016,1.264e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2016,1.265e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2016,-1.335e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2017,1.42826e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2017,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2017,2.06806e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2017,1.02732e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2017,7.1754e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2017,6.124e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2017,1.32e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2017,1.372e+09,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2017,-1.214e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2018,1.45438e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2018,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2018,2.19876e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2018,1.1527e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2018,7.5166e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2018,7.854e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2018,1.353e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2018,1.41e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2018,-4.08e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2019,1.47729e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2019,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2019,2.25723e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2019,1.16053e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2019,7.5046e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2019,7.08e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2019,1.538e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2019,1.42e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2019,-4.48e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2020,1.51057e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2020,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2020,2.30196e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2020,1.18619e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2020,7.1259e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2020,6.245e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2020,1.362e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2020,1.45e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2020,-6.81e+08,Current.Dollars,Table 6.8 DOD BA By Title
+Military Personnel,2021,1.54531e+11,Current.Dollars,Table 6.8 DOD BA By Title
+"Retired Pay, Defense",2021,NA,Current.Dollars,Table 6.8 DOD BA By Title
+Operation and Maintenance,2021,2.34446e+11,Current.Dollars,Table 6.8 DOD BA By Title
+Procurement,2021,1.2417e+11,Current.Dollars,Table 6.8 DOD BA By Title
+RDT&E,2021,7.1966e+10,Current.Dollars,Table 6.8 DOD BA By Title
+Military Construction,2021,7.099e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Family Housing,2021,1.543e+09,Current.Dollars,Table 6.8 DOD BA By Title
+Revolving and Management Funds,2021,1.61e+08,Current.Dollars,Table 6.8 DOD BA By Title
+"Trust, Receipts, and Other",2021,-7.86e+08,Current.Dollars,Table 6.8 DOD BA By Title
