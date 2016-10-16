@@ -1,0 +1,13 @@
+This folder used to contain with unzipped source DOD files. New script (as of 10-16-2016) now imports Comptroller data directly from DOD website. 
+
+Advantages:
+-Ensures data integrity, greater transparency
+
+Disadvantages:
+-Depends on source website to retain records
+-Requires network connectivity (some workplaces may prevent R from downloading, due to security protocols)
+-Troublesome formatting issues must be corrected using R (and not Excel) instead of being changed locally 
+
+
+
+http://comptroller.defense.gov/Budget-Materials/
