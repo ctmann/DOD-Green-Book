@@ -15,11 +15,22 @@ library(stringr)
 library(readr)
 library(zoo)
 
-# Import  Data ------------------------------------------------------------
+# Import  Data from Website------------------------------------------------------------
 
-# Create filename for import purposes
-# Note: Data is unzipped and stored in a Data/Raw subfolder as an Excel doc
-filename <- "../Data/Raw/FY17 PB Green Book Chap 2.xlsx"
+#Create Temporary Scaffolding
+my.temporary.zipped.file <- tempfile()
+my.temporarary.zipped.folder <- tempdir()
+
+# Declare Source Data Origin
+url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
+spreadsheet.name <- "FY17 PB Green Book Chap 2.xlsx"
+
+#Download Source Data to Temp Location
+download(url = url, dest = my.temporary.zipped.file)
+unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
+
+# Create Name of extracted file
+filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
 
 
 #Import  There are 15 sheets but only the first 14 have data. The last is for notes.
@@ -132,4 +143,4 @@ tidy_grnbook_supps_table <- function(t){
   
 # Export
 # View(t)
-write_csv(t, my.file)
+# write_csv(t, my.file)
