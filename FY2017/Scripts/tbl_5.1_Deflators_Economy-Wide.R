@@ -30,7 +30,7 @@ url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_
 spreadsheet.name <- "FY17 PB Green Book Chap 5.xlsx"
 
 #Download Source Data to Temp Location
-download(url = url, dest = my.temporary.zipped.file)
+download.file(url = url, dest = my.temporary.zipped.file)
 unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
 
 # Create Name of extracted file
@@ -70,10 +70,10 @@ econ.deflator <- read_excel(path = filename, sheet = 1, skip = 3)
   econ.deflator <- rename(econ.deflator, FY = Fiscal.Year)
 
 # Add 'No Deflator' Column
-econ.deflator$No.Deflator <- 1
+econ.deflator$No.Deflator <- 100
 
 # Gather and Tidy
-  econ.deflator <- gather(econ.deflator, econ.deflator.name, econ.deflator.value, -FY)
+  econ.deflator <- gather(econ.deflator, econ.deflator.name, econ.deflator.value, -FY, convert = TRUE)
 
 
 # Add MetaData ------------------------------------------------------------
@@ -92,7 +92,13 @@ econ.deflator <- econ.deflator %>%
 econ.deflator$econ.deflator.name <- str_replace_all(econ.deflator$econ.deflator.name, "[0-9]", "")
 
 # Correct CPI variable 
-econ.deflator$econ.deflator.name<- gsub(pattern = "Consumer.Price.Index..CPI.W.", replacement = "Consumer.Price.Index.CPI.W", x = econ.deflator$econ.deflator.name)
+econ.deflator$econ.deflator.name <- gsub(pattern = "Consumer.Price.Index..CPI.W.", replacement = "Consumer.Price.Index.CPI.W", x = econ.deflator$econ.deflator.name)
+
+
+
+# Data Corrections --------------------------------------------------------
+econ.deflator<- econ.deflator %>% 
+  mutate(econ.deflator.value = econ.deflator.value/100)
 
 
 # Export as .csv ------------------------------------------------------------------
