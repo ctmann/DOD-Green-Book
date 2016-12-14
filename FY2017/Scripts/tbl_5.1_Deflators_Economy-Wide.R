@@ -111,7 +111,7 @@ mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep =
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
 
 # Export
- write.csv(econ.deflator, my.file)
+ write.csv(econ.deflator, my.file, row.names = FALSE)
 
 
   
