@@ -73,7 +73,7 @@ econ.deflator <- read_excel(path = filename, sheet = 1, skip = 3)
 econ.deflator$No.Deflator <- 100
 
 # Gather and Tidy
-  econ.deflator <- gather(econ.deflator, econ.deflator.name, econ.deflator.value, -FY, convert = TRUE)
+  econ.deflator <- gather(econ.deflator, econ.deflator.name, econ.deflator.value, -FY)
 
 
 # Add MetaData ------------------------------------------------------------
