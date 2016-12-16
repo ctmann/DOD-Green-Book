@@ -63,8 +63,8 @@ econ.deflator <- read_excel(path = filename, sheet = 1, skip = 3)
   econ.deflator <- tbl_df(econ.deflator)
 
 # Clean: FY Column
-# Remove dots and spaces, convert to numeric
-  econ.deflator$Fiscal.Year <- as.numeric(str_replace_all(econ.deflator$Fiscal.Year, "[ ,.]", ""))
+# Remove dots and spaces, convert to factor
+  econ.deflator$Fiscal.Year <- as.factor(str_replace_all(econ.deflator$Fiscal.Year, "[ ,.]", ""))
   
 # Rename FY with dplyr! Awesome. (note..the new variable precedes the old one)
   econ.deflator <- rename(econ.deflator, FY = Fiscal.Year)
@@ -78,7 +78,7 @@ econ.deflator$No.Deflator <- 100
 
 # Add MetaData ------------------------------------------------------------
 # Add Base year column and source
-  econ.deflator$Deflator.Base.Year <- 2017
+  econ.deflator$Deflator.Base.Year <- factor(2017)
   econ.deflator$Deflator.Source <- "Table 5-1: Department of Defense and Selected Economy-Wide Indices"
 
 
@@ -111,14 +111,7 @@ mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep =
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
 
 # Export
- write.csv(econ.deflator, my.file, row.names = FALSE)
-
-
-  
-  
-  
-  
-  
+write_excel_csv(econ.deflator, my.file)
 
 
 
