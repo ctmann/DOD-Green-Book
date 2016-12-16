@@ -97,7 +97,7 @@ econ.deflator$econ.deflator.name <- gsub(pattern = "Consumer.Price.Index..CPI.W.
 
 
 # Data Corrections --------------------------------------------------------
-econ.deflator<- econ.deflator %>% 
+econ.deflator <- econ.deflator %>% 
   mutate(econ.deflator.value = econ.deflator.value/100)
 
 
