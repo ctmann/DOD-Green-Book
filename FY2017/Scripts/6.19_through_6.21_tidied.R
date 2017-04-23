@@ -8,6 +8,7 @@
 # Libraries ---------------------------------------------------------------
 
 library(tidyverse)
+library(readxl)
 library(stringr)
 library(nettles.toolbox)
 
@@ -126,7 +127,7 @@ nettle_dl.zip <- function(zip.url, table.file.name){
   # Download 6-19
     zurl <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
     my.spreadsheet <- "FY17 6-19_Army BA by Title.xlsx"
-    my.table.number <- "6-19"
+    my.table.number <- "tbl.6-19"
     my.dod.service <- "Army"
   
     army <- nettle_clean(zurl, my.spreadsheet, my.table.number, my.dod.service)
@@ -134,7 +135,7 @@ nettle_dl.zip <- function(zip.url, table.file.name){
   # Download 6-20  
     zurl <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
     my.spreadsheet <- "FY17 6-20_Navy BA by Title.xlsx"
-    my.table.number <- "6-20"
+    my.table.number <- "tbl.6-20"
     my.dod.service <- "Navy"
   
     navy <- nettle_clean(zurl, my.spreadsheet, my.table.number, my.dod.service)
@@ -143,7 +144,7 @@ nettle_dl.zip <- function(zip.url, table.file.name){
   # Download 6-21  
     zurl <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
     my.spreadsheet <- "FY17 6-21_Air Force BA by Title.xlsx"
-    my.table.number <- "6-21"
+    my.table.number <- "tbl.6-21"
     my.dod.service <- "Air.Force"
   
     air.force <- nettle_clean(zurl, my.spreadsheet, my.table.number, my.dod.service)
