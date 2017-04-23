@@ -3,7 +3,7 @@
 #' To View as pd:
 #' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY17_Green_Book.pdf
 #' 
-#' Table 6.19-6.21 DOD BA By by Service
+#' Table 6.19-6.21 DOD BA By by Service and Title
 #' 
 # Libraries ---------------------------------------------------------------
 
