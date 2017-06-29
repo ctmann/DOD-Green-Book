@@ -6,7 +6,7 @@
 
 #' #' Table 5-1: Department of Defense and Selected Economy-Wide Indices
 #' (1970-2021)
-#' Base Year = 2017
+#' Base Year = 2018
 #' 
 # Libraries ---------------------------------------------------------------
 
@@ -21,28 +21,25 @@ library(readr)
 
 #' # Import  Data ------------------------------------------------------------
 
-#Create Temporary Scaffolding
-my.temporary.zipped.file <- tempfile()
-my.temporarary.zipped.folder <- tempdir()
+x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2018/FY_2018_Green_Book.zip"
+y <- "FY18 PB Green Book Chap 5.xlsx" 
 
-# Declare Source Data Origin
-url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
-spreadsheet.name <- "FY17 PB Green Book Chap 5.xlsx"
+nettle_downzip <- function(zip.url, zip.file){
+    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
+    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
+    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
+    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
+    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
+    return(location.of.unzipped.file )
+    }
 
-#Download Source Data to Temp Location
-download.file(url = url, dest = my.temporary.zipped.file)
-unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
-
-# Create Name of extracted file
-filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
-
+my.filename <- nettle_downzip(x,y)
 
 # Import tbl 5-1 on sheet 1 of workbook
-econ.deflator <- read_excel(path = filename, sheet = 1, skip = 3)
+econ.deflator <- read_excel(path = my.filename, sheet = 1, skip = 3)
 
 
 # Cleaning and Shaping ----------------------------------------------------------------
-
 
 # Shaping
   # Make all colnames r-friendly
@@ -50,14 +47,19 @@ econ.deflator <- read_excel(path = filename, sheet = 1, skip = 3)
   
   # Shape the Width: Select Columns to use
   econ.deflator <- econ.deflator %>% 
-    select(Fiscal.Year, Gross.Domestic.Product1,Consumer.Price.Index..CPI.W.2,Dept.of.Defense.Non.Pay, Dept.of.Defense.Purchases3, Total.Department.of.Defense)
+    select(Fiscal.Year, 
+           Gross.Domestic.Product1,
+           Consumer.Price.Index..CPI.W.2,
+           Dept.of.Defense.Non.Pay, 
+           Dept.of.Defense.Purchases3, 
+           Total.Department.of.Defense)
   
   # Shape the Length: omit bottom notes (save notes for later)
   # Save Notes
-  econ.deflator.notes <- econ.deflator[54:56,1]
+  #econ.deflator.notes <- econ.deflator[54:56,1]
   
   # Cut off bottom rows
-  econ.deflator <- econ.deflator[1:52,]
+  econ.deflator <- econ.deflator[1:53,]
   
   # Convert to Table df
   econ.deflator <- tbl_df(econ.deflator)
@@ -78,7 +80,7 @@ econ.deflator$No.Deflator <- 100
 
 # Add MetaData ------------------------------------------------------------
 # Add Base year column and source
-  econ.deflator$Deflator.Base.Year <- factor(2017)
+  econ.deflator$Deflator.Base.Year <- factor(2018)
   econ.deflator$Deflator.Source <- "Table 5-1: Department of Defense and Selected Economy-Wide Indices"
 
 
