@@ -15,44 +15,27 @@ library(nettles.toolbox)
 
 # Download Function -----------------------------------------------------------
 
-# Sub Function to create filename from downloaded location
-  nettle_file.creator <- function(my.zip.folder, table.file.name){
-   my.complete.filename <- paste0(my.zip.folder,"/FY17 PB Green Book Chap 6/", table.file.name)
-    return(my.complete.filename)
-  }
-  
-# Download Function: Outputs file location
-nettle_dl.zip <- function(zip.url, table.file.name){
-  #Create Temporary Scaffolding - download to temp dir
-    my.temporary.zipped.file <- tempfile()
-    my.temporarary.zipped.folder <- tempdir()
-  # Download Location
-  url <- zip.url
-#Download Source Data to Temp Location
-  download.file(url = url, dest = my.temporary.zipped.file)
-  unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
-#return(my.temporarary.zipped.folder)
-  
-#- Subfunction to output name of file  
-  return(nettle_file.creator(my.temporarary.zipped.folder, table.file.name))
-  
-}
+#' # Import  Data ------------------------------------------------------------
+x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2018/FY_2018_Green_Book.zip"
+y <- "FY18 PB Green Book Chap 6/" 
 
+nettle_downzip <- function(zip.url, zip.file){
+    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
+    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
+    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
+    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
+    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
+    return(location.of.unzipped.file )
+    }
 
+my.filename <- nettle_downzip(x,y)
 
 # Clean Function ----------------------------------------------------------
 
-  nettle_clean <- function(zip.url, spreadsheet.name, my.table.number, dod.service){
-    
-    filename <- nettle_dl.zip(zip.url,table.file.name = spreadsheet.name )
-  
-    
-#    my.temporarary.zipped.folder <- nettle_dl.zip(zip.location)  
-  # Create Name of extracted file
- #   filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
+  nettle_clean <- function(location.of.file, my.table.number, dod.service){
 
   # Due to missing column names, read_excel requires col_names = False
-  orig <-  read_excel(filename, 
+  orig <-  read_excel(location.of.file, 
         na = "0", skip = 4, col_names = FALSE)
 
   # Basic Shaping (remove blank cols)
@@ -60,11 +43,11 @@ nettle_dl.zip <- function(zip.url, table.file.name){
     select(-2,-3) 
 
   # Easy to create Universal Col Header
-    n <-  1948:2021
+    n <-  1948:2018
     my.col.header <- c("Public Law Title", n, "deflator.type")
 
   # Remove trailing dots from first col
-    orig[,1] <- str_trim(str_replace_all(orig$X0, "[0-9.]+", ""))
+    orig[,1] <- str_trim(str_replace_all(orig$X__1, "[0-9.]+", ""))
 
   ## End orig
   
@@ -110,8 +93,7 @@ nettle_dl.zip <- function(zip.url, table.file.name){
   # Add Source Notes
   tidied$data.notes <- "All enacted war and supplemental funding is included"
   tidied$source.table <- my.table.number
-  tidied$soure.file <- spreadsheet.name
-  tidied$Service <- dod.service
+  tidied$Service <- my.dod.service
   
   return(tidied)
   }
@@ -125,29 +107,27 @@ nettle_dl.zip <- function(zip.url, table.file.name){
   #   Inputs: zip.url, spreadsheet.name, my.table.number, dod.service
 
   # Download 6-19
-    zurl <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
-    my.spreadsheet <- "FY17 6-19_Army BA by Title.xlsx"
+    location.of.file <- paste0(my.filename,"6-19.xlsx")
     my.table.number <- "tbl.6-19"
     my.dod.service <- "Army"
   
-    army <- nettle_clean(zurl, my.spreadsheet, my.table.number, my.dod.service)
+    army <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
   
   # Download 6-20  
-    zurl <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
-    my.spreadsheet <- "FY17 6-20_Navy BA by Title.xlsx"
+    location.of.file <- paste0(my.filename,"6-20.xlsx")
     my.table.number <- "tbl.6-20"
     my.dod.service <- "Navy"
   
-    navy <- nettle_clean(zurl, my.spreadsheet, my.table.number, my.dod.service)
+    navy <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
   
   
   # Download 6-21  
-    zurl <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
-    my.spreadsheet <- "FY17 6-21_Air Force BA by Title.xlsx"
+    location.of.file <- paste0(my.filename,"6-21.xlsx")
     my.table.number <- "tbl.6-21"
     my.dod.service <- "Air.Force"
   
-    air.force <- nettle_clean(zurl, my.spreadsheet, my.table.number, my.dod.service)
+    air.force <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
+  
     
 
 # tidy --------------------------------------------------------------------
@@ -162,12 +142,21 @@ ba.by.title <- bind_rows(army, navy, air.force)
              deflator.type,
              Amount,
              source.table,
-             data.notes,
-             source.file = soure.file)
+             data.notes)
 
-# Export ------------------------------------------------------------------
-nettle_export(ba.by.title,"6.19-6.21_BA.by.Service.and.Title")
-    
+# Complete and Export as .csv -----------------------------------------------------
+
+# Filename
+mylocation <- "../Data/Processed"
+myfilename <- "6.19-6.21_BA.by.Service.and.Title"
+mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
+
+my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
+
+# Export
+write_csv(ba.by.title, my.file)
+
+
 
 
 
