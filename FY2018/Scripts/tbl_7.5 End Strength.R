@@ -12,12 +12,25 @@ library(readxl)
 library(stringr)
 library(nettles.toolbox)
 
-setwd("~/Documents/R Programming/Repositories/DOD-Green-Book/FY2017")
+#' # Import  Data ------------------------------------------------------------
+x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2018/FY_2018_Green_Book.zip"
+y <- "FY18 PB Green Book Chap 7.xlsx"
 
-end.strength <- read_excel('./Data/Raw/FY17 PB Green Book Chap 7.xlsx','7-5')
+nettle_downzip <- function(zip.url, zip.file){
+    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
+    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
+    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
+    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
+    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
+    return(location.of.unzipped.file )
+    }
+
+my.filename <- nettle_downzip(x,y)
+
+end.strength <- read_excel(my.filename,'7-5')
 
 # Cut Dataset
-end.strength.data <- end.strength[c(5:83, 85:86),c(1,3:7, 9:12)]
+end.strength.data <- end.strength[c(5:84, 86:87),c(1,3:7, 9:12)]
 
 # Fix Rownames
 names(end.strength.data) <- end.strength.data[1,]
@@ -36,7 +49,7 @@ names(end.strength.data) <- c(
   "Air Force,Civilians",
   "Defense Agencies,Civilians"
 )
-View(end.strength.data)
+#View(end.strength.data)
 
 # Tidy
 end.strength.data.tdy <- gather(end.strength.data, Service, Personnel, -FY)
@@ -58,14 +71,11 @@ end.strength.data.tdy <- end.strength.data.tdy %>%
 
 # Export ------------------------------------------------------------------
 
-nettle_export <- function(df, my.filename, my.data.subfolder = "Processed", ...){
-  df <- dplyr::tbl_df(df)
-  my.data.folder.location <- paste0(getwd(), "/Data")
-  my.data.subfolder <- "Processed"
-  my.filename <- my.filename
-  my.timestamp <- paste('Updated', format(Sys.time(), format = ".%Y-%m-%d.%H%M") , sep = "")
-  export.this <- sprintf("%s/%s/%s_%s.csv", my.data.folder.location, my.data.subfolder, my.filename, my.timestamp)
-  return(readr::write_csv(df, export.this))
-}
+mylocation <- "../Data/Processed"
+myfilename <- "tbl.7.5_DOD.Manpower"
+mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
 
-nettle_export(end.strength.data.tdy, "tbl.7-5 DOD Manpower")
+my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
+write_csv(end.strength.data.tdy, my.file)
+
+
