@@ -13,50 +13,47 @@ library(readxl)
 library(stringr)
 library(readr)
 
-# Import  Data ------------------------------------------------------------
 
-#Create Temporary Scaffolding
-my.temporary.zipped.file <- tempfile()
-my.temporarary.zipped.folder <- tempdir()
+#' # Import  Data ------------------------------------------------------------
+x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2018/FY_2018_Green_Book.zip"
+y <- "FY18 PB Green Book Chap 6/6-8.xlsx"
 
-# Declare Source Data Origin
-url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
-spreadsheet.name <- "FY17 PB Green Book Chap 6/FY17 6-8_DoD BA by Title.xlsx"
+nettle_downzip <- function(zip.url, zip.file){
+    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
+    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
+    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
+    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
+    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
+    return(location.of.unzipped.file )
+    }
 
-#Download Source Data to Temp Location
-download(url = url, dest = my.temporary.zipped.file)
-unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
-
-# Create Name of extracted file
-filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
+my.filename <- nettle_downzip(x,y)
 
 
 # Reshape -----------------------------------------------------------------
 
 #excel_sheets(filename)
-df.raw <- read_excel(filename, skip = 4)
+df.raw <- read_excel(my.filename, skip = 4) 
 
 # Flatten -----------------------------------------------------------------
-# Shape Subset for Current Dollars, ignore rest
-df <- df.raw[2:10, -2:-3]
+# Shape Subset for Current Dollars
+current.df <- df.raw[2:10, -2:-3]
+constant.df <- df.raw[13:21, -2:-3]
 
-# Flatten
-df.flat <- gather(df, Fiscal.Year, Amount, -1) 
+nettle_tidy <- function(df, type.of.dollars){
+  x <- gather(df, Fiscal.Year, Amount, -1) 
+  x$Amount <- x$Amount * 1e6
+  x$`Public Law Title` <- str_trim(gsub("[0-9.]+", "", x$`Public Law Title`))
+  x <- separate(x, Fiscal.Year, c('trash', 'FY'), convert = TRUE )
+  x <- x[,-2]
+  x$Deflator.Type <- type.of.dollars
+  x$Source <- "Table 6.8 DOD BA By Title"
+return(x)
+}
 
-# Fixing ------------------------------------------------------------------
-
-# Dollars in millions
-df.flat$Amount <- df.flat$Amount * 1e6
-
-# Remove trailing dots (non-alphanumeric)
-df.flat$`Public Law Title` <- str_trim(gsub("[0-9.]+", "", df.flat$`Public Law Title`))
-
-# Remove 'FY' from Fiscal.Year column
-df.flat <- separate(df.flat, Fiscal.Year, c('trash', 'FY'), convert = TRUE )
-df.flat <- df.flat[,-2]
-
-df.flat$Deflator.Type <- "Current.Dollars"
-df.flat$Source <- "Table 6.8 DOD BA By Title"
+current <- nettle_tidy(current.df, "Current")
+constant <- nettle_tidy(constant.df, "Constant")
+df.flat<- bind_rows(current, constant)
 
 
 # Export ------------------------------------------------------------------

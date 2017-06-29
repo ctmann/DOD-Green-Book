@@ -148,7 +148,7 @@ ba.by.title <- bind_rows(army, navy, air.force)
 
 # Filename
 mylocation <- "../Data/Processed"
-myfilename <- "6.19-6.21_BA.by.Service.and.Title"
+myfilename <- "tbl.6.19-6.21_BA.by.Service.and.Title"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
 
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
