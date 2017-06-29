@@ -18,30 +18,31 @@ library(readr)
 library(ggplot2)
 
 #' # Import  Data ------------------------------------------------------------
+x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2018/FY_2018_Green_Book.zip"
+y <- "FY18 PB Green Book Chap 5.xlsx" 
 
-#Create Temporary Scaffolding
-my.temporary.zipped.file <- tempfile()
-my.temporarary.zipped.folder <- tempdir()
+nettle_downzip <- function(zip.url, zip.file){
+    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
+    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
+    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
+    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
+    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
+    return(location.of.unzipped.file )
+    }
 
-# Declare Source Data Origin
-url <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2017/FY_2017_Green_Book.zip"
-spreadsheet.name <- "FY17 PB Green Book Chap 5.xlsx"
-
-#Download Source Data to Temp Location
-download(url = url, dest = my.temporary.zipped.file)
-unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder)
-
-# Create Name of extracted file
-filename <- sprintf('%s/%s', my.temporarary.zipped.folder, spreadsheet.name) 
+my.filename <- nettle_downzip(x,y)
 
 
 # Reshape -----------------------------------------------------------------
 
-# Import tbl 5-5 on sheet 6 of workbook
-dod.deflator <- tbl_df(read_excel(path = filename, sheet = 6, skip = 4))
+# Import tbl 5-5 on sheet 5 of workbook
+dod.deflator <- tbl_df(read_excel(path = my.filename, sheet = 6, skip = 4))
 
 # Make all colnames r-friendly
 colnames(dod.deflator) <- make.names(colnames(dod.deflator))
+
+# Remove Extra Col
+dod.deflator <- dod.deflator[,-2]
 
 # Add Columns -------------------------------------------------------------
 
@@ -49,10 +50,10 @@ colnames(dod.deflator) <- make.names(colnames(dod.deflator))
 colnames(dod.deflator)[1] <- "FY"
 
 # New Column: dod.deflator Name
-dod.deflator$Source <- names(read_excel(path = filename, sheet = 6))[1]
+dod.deflator$Source <- names(read_excel(path = my.filename, sheet = 6))[1]
 
 # New Column: dod.deflator Base Year
-dod.deflator$Base.FY <- 2017
+dod.deflator$Base.FY <- 2018
 
 
 # Clean and Tidy -------------------------------------------------------------------
