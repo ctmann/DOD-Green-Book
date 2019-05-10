@@ -157,7 +157,7 @@ mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep =
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
 
 # Export
-write_csv(ba.by.title, my.file)
+write_csv(t, my.file)
 
 
 
