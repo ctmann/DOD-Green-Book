@@ -39,7 +39,7 @@ my.filename <- "./Data/Raw/FY_2020_Green_Book/FY20 PB Green Book Chap 6/"
 # Clean Function ----------------------------------------------------------
 
 nettle_clean <- function(location.of.file, my.table.number, dod.service){
-
+  
   # Due to missing column names, read_excel requires col_names = False
   orig <-  read_excel(location.of.file, 
         na = "0", skip = 4, col_names = FALSE)
@@ -59,7 +59,7 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
   
   ## Begin current  
     current <- orig %>% 
-      slice(1:9) %>% 
+      slice(1:10) %>% #< This assumes no more accounts will be added. In FY2020, one was.
       slice(-1) %>% 
       mutate(delator.type = "Current")
   
@@ -71,7 +71,7 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
 
   ### Begin Constant
   constant  <- orig %>% 
-    slice(12:19) %>% 
+    slice(12:20) %>% #< This assumes no more accounts will be added. In FY2020, one was.
       mutate(delator.type = "Constant")
   
   # Rename Col Headers
@@ -157,7 +157,7 @@ mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep =
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
 
 # Export
-write_csv(t, my.file)
+write_csv(ba.by.title, my.file)
 
 
 
