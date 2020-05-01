@@ -4,8 +4,7 @@
 #' Table 2.1 Base Budget, War Funding and Supplementals by Military Department, by P.L. Title
 #' (Discretionary Budget Authority)
 #' 
-#' Updated: 05-10-2019 fo FY2020
-#' Note: Modified for FY2020, may not work for earlier years
+#' Updated: 05-01-2020 fo FY2021
 #' 
 # Libraries ---------------------------------------------------------------
 
@@ -14,12 +13,21 @@ library(dplyr)
 library(readxl)
 library(stringr)
 library(readr)
+library(readxl)
 library(zoo)
+
+
+# Preliminaries -----------------------------------------------------------
+# Set working dir manually
+
+# Download new raw data?
+  download.switch <- "download.switch.on"
+  download.switch <- "download.switch.off"
 
 # Import  Data from Website------------------------------------------------------------
 
-x <- "https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY_2020_Green_Book.zip"
-y <- "FY20 PB Green Book Chap 2.xlsx" 
+x <- "https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY_2021_Green_Book.zip"
+y <- "FY21 PB Green Book Chap 2.xlsx" 
 
 nettle_downzip <- function(zip.url, zip.file){
     my.temporary.zipped.file <- tempfile()   # Zip file will go in here
@@ -35,10 +43,12 @@ my.filename <- nettle_downzip(x,y)
 
 # Reshape -----------------------------------------------------------------
 
-#Import  There are 15 sheet
-t <-  lapply(excel_sheets(my.filename)[1:16], read_excel, path = my.filename, col_names = F, skip = 5 )
-
-
+#Import  There are 18 sheet
+t <-  lapply(excel_sheets(my.filename)[1:18], 
+             read_excel, 
+             path = my.filename, 
+             col_names = F, 
+             skip = 5 )
 
 #' User Defined Cleaning Function ---------------------------------------------------
 #' Purpose:Create function that cleans and tidies
