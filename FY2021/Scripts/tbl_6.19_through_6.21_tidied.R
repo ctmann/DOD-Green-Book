@@ -1,14 +1,7 @@
-#FY2020 update: missing negative values (total receipts)
+#FY2021 update: missing negative values (total receipts)
 # because "total" probably filtered out
 
-#' Original DoD Comptroller zip file downloaded here:
-#' http://comptroller.defense.gov/BudgetMaterials.aspx
-#' To View as pd:
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY19_Green_Book.pdf
-#' 
-#' To download as zip
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip
-#' 
+
 #' 
 #' Table 6.19-6.21 DOD BA By by Service and Title
 #' 
@@ -17,13 +10,12 @@
 library(tidyverse)
 library(readxl)
 library(stringr)
-library(nettles.toolbox)
 
 # Download Function -----------------------------------------------------------
 
 #' # Import  Data ------------------------------------------------------------
-x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2020/FY_2020_Green_Book.zip"
-y <- "FY20 PB Green Book Chap 6/" 
+x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY_2021_Green_Book.zip"
+y <- "FY21 PB Green Book Chap 6/" 
 
 nettle_downzip <- function(zip.url, zip.file){
     my.temporary.zipped.file <- tempfile()   # Zip file will go in here
@@ -34,9 +26,9 @@ nettle_downzip <- function(zip.url, zip.file){
     return(location.of.unzipped.file )
     }
 
-my.filename <- "./Data/Raw/FY_2020_Green_Book/FY20 PB Green Book Chap 6/"
+my.filename <- "./Data/Raw/FY_2021_Green_Book/FY21 PB Green Book Chap 6/"
 
-# Clean Function ----------------------------------------------------------
+# Create Clean Function ----------------------------------------------------------
 
 nettle_clean <- function(location.of.file, my.table.number, dod.service){
   
@@ -49,7 +41,7 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
     select(-2,-3) 
 
   # Easy to create Universal Col Header
-    n <-  1948:2024
+    n <-  1948:2025
     my.col.header <- c("Public Law Title", n, "deflator.type")
 
   # Remove trailing dots from first col
@@ -115,19 +107,21 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
   #   Inputs: zip.url, spreadsheet.name, my.table.number, dod.service
 
   # Download 6-19
-    location.of.file <- paste0(my.filename,"FY20 PB Green Book Table 6-19.xlsx")
+    location.of.file <- paste0(my.filename,"FY21 PB Green Book Table 6-19.xlsx")
     my.table.number <- "tbl.6-19"
     my.dod.service <- "Army"
-    army <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
+    army <- nettle_clean(location.of.file = location.of.file, 
+                         my.table.number, 
+                         my.dod.service)
   
   # Download 6-20  
-    location.of.file <- paste0(my.filename,"FY20 PB Green Book Table 6-20.xlsx")
+    location.of.file <- paste0(my.filename,"FY21 PB Green Book Table 6-20.xlsx")
     my.table.number <- "tbl.6-20"
     my.dod.service <- "Navy"
     navy <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
   
   # Download 6-21  
-    location.of.file <- paste0(my.filename,"FY20 PB Green Book Table 6-21.xlsx")
+    location.of.file <- paste0(my.filename,"FY21 PB Green Book Table 6-21.xlsx")
     my.table.number <- "tbl.6-21"
     my.dod.service <- "Air.Force"
     air.force <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
@@ -147,7 +141,7 @@ ba.by.title <- bind_rows(army, navy, air.force)
              source.table,
              data.notes)
 
-# Addind in FY2020 to accommodate new data shape
+# Addind in FY2021 to accommodate new data shape
   ba.by.title <- ba.by.title %>% 
     filter(!str_detect(`Public Law Title`, "Constant")) %>% 
     filter(!str_detect(`Public Law Title`, "Current")) 

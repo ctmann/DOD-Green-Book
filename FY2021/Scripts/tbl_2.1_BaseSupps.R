@@ -145,7 +145,7 @@ tidy_grnbook_supps_table <- function(t){
                            ifelse(t$Account %in% emergency.relief, "Emergency Relief",
                            ifelse(t$Account %in% other, "Other Discretionary", "uncategorized")))))   
   # Include Source Column
-  t$Source_Data <- "FY20 Green Book, tbl 2.1"
+  t$Source_Data <- "FY21 Green Book, tbl 2.1"
 
 # Export ------------------------------------------------------------------
 # Export as .csv
