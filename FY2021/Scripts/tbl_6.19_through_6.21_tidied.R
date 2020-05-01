@@ -141,10 +141,10 @@ ba.by.title <- bind_rows(army, navy, air.force)
              source.table,
              data.notes)
 
-# Addind in FY2021 to accommodate new data shape
-  ba.by.title <- ba.by.title %>% 
-    filter(!str_detect(`Public Law Title`, "Constant")) %>% 
-    filter(!str_detect(`Public Law Title`, "Current")) 
+# # Addind in FY2021 to accommodate new data shape
+#   ba.by.title <- ba.by.title %>% 
+#     filter(!str_detect(`Public Law Title`, "Constant")) %>% 
+#     filter(!str_detect(`Public Law Title`, "Current")) 
 
         
 # Complete and Export as .csv -----------------------------------------------------
