@@ -1,9 +1,9 @@
-#FY2021 update: missing negative values (total receipts)
-# because "total" probably filtered out
 
-
-#' 
 #' Table 6.19-6.21 DOD BA By by Service and Title
+#' 
+#' 
+#' Download raw files to temp folder locally for processing
+#' Raw files stored in subfolder are not necessary
 #' 
 # Libraries ---------------------------------------------------------------
 
@@ -11,7 +11,7 @@ library(tidyverse)
 library(readxl)
 library(stringr)
 
-# Download Function -----------------------------------------------------------
+# Create download Function -----------------------------------------------------------
 
 #' # Import  Data ------------------------------------------------------------
 x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY_2021_Green_Book.zip"
@@ -34,7 +34,7 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
   
   # Due to missing column names, read_excel requires col_names = False
   orig <-  read_excel(location.of.file, 
-        na = "0", skip = 4, col_names = FALSE)
+        na = "0", skip = 4, col_names = TRUE)
 
   # Basic Shaping (remove blank cols)
   orig <- orig %>% 
@@ -42,45 +42,30 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
 
   # Easy to create Universal Col Header
     n <-  1948:2025
-    my.col.header <- c("Public Law Title", n, "deflator.type")
-
-  # Remove trailing dots from first col
-    orig[,1] <- str_trim(str_replace_all(orig$X__1, "[0-9.]+", ""))
+    my.col.header <- c("Public Law Title", n)
+    names(orig) <- my.col.header
 
   ## End orig
   
-  ## Begin current  
+  ## Splice off "Current Dollars" amounts
     current <- orig %>% 
       slice(1:10) %>% #< This assumes no more accounts will be added. In FY2020, one was.
       slice(-1) %>% 
-      mutate(delator.type = "Current")
-  
-  # Rename Col Headers
-  names(current) <- my.col.header
+      mutate(deflator.type = "current")
 
-  ##< End Current>
-  
-
-  ### Begin Constant
+  ## Splice off "Constant Dollars" amounts
   constant  <- orig %>% 
     slice(12:20) %>% #< This assumes no more accounts will be added. In FY2020, one was.
-      mutate(delator.type = "Constant")
-  
-  # Rename Col Headers
-    names(constant) <- my.col.header
-  
-    ##<End Constant
- 
-    
+      mutate(deflator.type = "constant")
+
   # Combine Current and Constant Datasets
   combined <- bind_rows(constant, current)
-  
-  
-  # Tidy -----------------------------------------------------------------
+
+  # Tidy 
   tidied <- combined %>% 
     gather(FY, Amount, -`Public Law Title`,-deflator.type) 
   
-  # Format Fixing ------------------------------------------------------------------
+  # Format Fixing 
   # Convert String to Millions
   tidied$Amount <- as.numeric(tidied$Amount)
   tidied$Amount <- tidied$Amount *1e6
@@ -91,14 +76,13 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
   
   # Meta --------------------------------------------------------------
   # Add Source Notes
-  tidied$data.notes <- "All enacted war and supplemental funding is includedl; Includes both discretionary and mandatory "
+  tidied$data.notes <- "All enacted war and supplemental funding is included; Includes both discretionary and mandatory "
   tidied$source.table <- my.table.number
   tidied$Service <- my.dod.service
   
     return(tidied)
   }
     
-
 # Use  -----------------------------------------------------------------
 
 # Download the file with nettle function (Assume Identical Shape of Separate Tabs)
@@ -126,10 +110,9 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
     my.dod.service <- "Air.Force"
     air.force <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
   
-
 # tidy --------------------------------------------------------------------
 
-ba.by.title <- bind_rows(army, navy, air.force) 
+ba.by.title <- bind_rows(army, navy, air.force) %>% filter(complete.cases(.))
 
     #Rearrange to sensible order
     ba.by.title <- ba.by.title %>% 
@@ -146,7 +129,6 @@ ba.by.title <- bind_rows(army, navy, air.force)
 #     filter(!str_detect(`Public Law Title`, "Constant")) %>% 
 #     filter(!str_detect(`Public Law Title`, "Current")) 
 
-        
 # Complete and Export as .csv -----------------------------------------------------
 
 # Filename
