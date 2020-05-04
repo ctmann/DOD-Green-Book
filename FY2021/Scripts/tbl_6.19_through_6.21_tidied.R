@@ -112,7 +112,9 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
   
 # tidy --------------------------------------------------------------------
 
-ba.by.title <- bind_rows(army, navy, air.force) %>% filter(complete.cases(.))
+ba.by.title <- bind_rows(army, navy, air.force) %>% 
+      filter(complete.cases(.)) %>% 
+      mutate(`Public Law Title` = str_replace_all(`Public Law Title`, "\\.","") %>% str_trim() ) 
 
     #Rearrange to sensible order
     ba.by.title <- ba.by.title %>% 
