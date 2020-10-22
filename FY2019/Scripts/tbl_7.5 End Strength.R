@@ -1,77 +1,84 @@
 #' Original DoD Comptroller zip file downloaded here:
 #' http://comptroller.defense.gov/BudgetMaterials.aspx
-#' To View as pd:
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY19_Green_Book.pdf
-#' 
-#' To download as zip
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip
-#' 
+
 #' Table 7.5 End Strength FTEs
 #' 
+#' Notes: Data stored locally due to firewalls and other probs
+#' 
+#' DataNotes
+    #' #' 1.  Active duty military figures include the activation of 25,652 reservists and National Guard personnel in FY 1990, pursuant to section 673b, Title 10 U.S.C.; in FY 1991, 17,059 reservists and National Guard personnel; and in FY 1992, 954 reservists and National Guard personnel, pursuant to sections 672 and 673, Title 10 U.S.C., in support of Operations Desert Shield/Desert Storm.															
+    #' 															
+    #' "2.  Beginning in 1953, civilian work force figures include both U.S. and foreign national direct hires, and the foreign national indirect hire employees that support U.S. forces overseas.  Personnel funded from a
+    #' non-DoD Foreign Military Sales trust fund are included as well.  Beginning in FY 1996, the federal civilian work force is measured in full time equivalents (FTE's)."															
+    #' 															
+    #' 3.  Navy reserve personnel on active duty for Training and Administration of Reserves (TARS) are included in the active Navy data prior to FY 1980, and in the Full-Time Guard and Reserve data thereafter.															
+    #' 4.  Air Force civil service employment is included in the Army data prior to 1948, and identified separately thereafter.															
+    #' 5.  Reflects enacted amounts.															
+    #' NOTE:  For fiscal years 2020 and prior, war and supplemental data are included.															
+#' 
 # Libraries ---------------------------------------------------------------
-
 library(tidyverse)
 library(readxl)
-library(stringr)
-library(nettles.toolbox)
+
+# How to Update this File -------------------------------------------------
+# 1. Set working directory
+    setwd("~/Documents/R Programming/Repositories/DOD-Green-Book/FY2021")
+
+# 2. Change filename
+my.filename <- "FY21 PB Green Book Chap 7.xlsx"
+my.tab      <- "7-5"
+
+# 3. Shape of Data table
+# rows vary year by year, check "Reshape Dataset" in code below
+
+
+# Common Vars and Functions -----------------------------------------------
+my.filename.full <- str_c(getwd(), "/Data/Raw/", my.filename)
 
 #' # Import  Data ------------------------------------------------------------
-x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip"
-y <- "FY19 PB Green Book Chap 7.xlsx"
+my.filename.full <- str_c(getwd(), "/Data/Raw/FY_2021_Green_Book/", my.filename)
+end.strength <- read_excel(my.filename.full, my.tab)
 
 
-nettle_downzip <- function(zip.url, zip.file){
-    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
-    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
-    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
-    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
-    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
-    return(location.of.unzipped.file )
-    }
 
-my.filename <- nettle_downzip(x,y)
+# Tidy --------------------------------------------------------------------
+# Reshape Dataset: This Varies from year to to year!
+end.strength <- end.strength[c(5:86,  # Area - by row
+                                    89),   # Area - by row (ignore base/oco, take total)
+                                  c(1,3:8, # Area - by col (remove blank rows, totals)
+                                    10:14)  # Area - by col
+                                  ]
 
-end.strength <- read_excel(my.filename,'7-5')
+# Renames
 
-# Shape Dataset: This Varies from year to to year!
-end.strength.data <- end.strength[c(5:83, 86, 89), c(1,3:7, 9:12)]
-
-
-# Names
-
-names(end.strength.data) <- c(
+names(end.strength) <- c(
   "FY",
   "Army,Active",
   "Navy,Active",
   "Marine Corps,Active",
   "Air Force,Active",
+  "Space Force,Active",
   "Full Time Guard and Reserve,Active",
-  "Army, Civilians",
+  "Army,Civilians",
   "Navy and Marine Corps,Civilians",
   "Air Force,Civilians",
+  "Space Force,Civilians",
   "Defense Agencies,Civilians"
         )
-end.strength.data <- end.strength.data[-1,]
+end.strength <- end.strength[-1,]
 
 
 # Tidy
-end.strength.data.tdy <- gather(end.strength.data, Service, Personnel, -FY)
-#View(end.strength.data.tdy)
+end.strength <- end.strength %>% 
+  pivot_longer(-FY, 
+               names_to = "service",
+               values_to = "personnel") #contains NAs
 
-# Remove Dots, Trim, Remove "Total" text
-end.strength.data.tdy$FY <-  str_replace_all(end.strength.data.tdy$FY, "[.]","")
-end.strength.data.tdy$FY <- str_trim(end.strength.data.tdy$FY, "both")
-end.strength.data.tdy$FY <- str_sub(end.strength.data.tdy$FY, start = 1, end = 4)
-     
-#Convert to Numerics
-end.strength.data.tdy$Personnel <- as.numeric(end.strength.data.tdy$Personnel)
-end.strength.data.tdy <- end.strength.data.tdy %>% 
-  mutate(Personnel = as.numeric(Personnel*1e3))
-
-# Separate into Active/Civilian
-end.strength.data.tdy <- end.strength.data.tdy %>% 
-  separate(col = Service, into = c("Service", "Active.or.Civilians"), ",")
-
+    
+end.strength <- end.strength %>% 
+  mutate(FY = FY %>% str_extract("[0-9]{4}"), #Remove dots
+         personnel = replace_na(personnel, 0) %>% as.numeric()*1e3, ) %>%  #convert numbers
+         separate(col = service, into = c("Service", "Active.or.Civilians"), ",")
 
 
 # Export ------------------------------------------------------------------
@@ -81,6 +88,6 @@ myfilename <- "tbl.7.5_DOD.Manpower"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
 
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
-write_csv(end.strength.data.tdy, my.file)
+write_csv(end.strength, my.file)
 
 
