@@ -5,59 +5,76 @@
 #' Download raw files to temp folder locally for processing
 #' Raw files stored in subfolder are not necessary
 #' 
+#' # How to Update this File -------------------------------------------------
+#' 
+#'   1) Set working Directory to current year:
+          setwd("./DOD-Green-Book/FY2021")
+#' 
+#'   2) Download Comptroller data to Raw folder (manually).
+#'   
+#'   3) Update name of Chapter 6 raw data folder, files
+          chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
+#' 
+#'   4) Update Name of specific files
+          tbl.6.19.Army <- "FY21 PB Green Book Table 6-19.xlsx"
+          tbl.6.20.Navy <- "FY21 PB Green Book Table 6-20.xlsx"
+          tbl.6.21.USAF <- "FY21 PB Green Book Table 6-21.xlsx"
+
+#'   5) Set current year
+          current.FY <- 2021
+
+#'  6) Shape of each df may change. Currently:
+#'       Current dollars:  7 (MILPERS) :14 (Trust, Receipts, and Other)
+#'       Constant Dollars: 16 (MILPERS):24 (Trust, Receipts, and Other)
+
 # Libraries ---------------------------------------------------------------
 
 library(tidyverse)
 library(readxl)
 library(stringr)
 
-# Create download Function -----------------------------------------------------------
+# Comm Vars, Functions ---------------------------------------------------------------
+    # None
+          
+  #Testing Purposes          
+  #file.name <- paste0(file.location, tbl.6.19.Army)
 
-#' # Import  Data ------------------------------------------------------------
-x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY_2021_Green_Book.zip"
-y <- "FY21 PB Green Book Chap 6/" 
-
-nettle_downzip <- function(zip.url, zip.file){
-    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
-    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
-    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
-    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
-    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
-    return(location.of.unzipped.file )
-    }
-
-my.filename <- "./Data/Raw/FY_2021_Green_Book/FY21 PB Green Book Chap 6/"
 
 # Create Clean Function ----------------------------------------------------------
 
-nettle_clean <- function(location.of.file, my.table.number, dod.service){
+nettle_clean <- function(file.name, 
+                         my.table.number, 
+                         dod.service,
+                         current.FY){
   
   # Due to missing column names, read_excel requires col_names = False
-  orig <-  read_excel(location.of.file, 
-        na = "0", skip = 4, col_names = TRUE)
+    orig <-  read_excel(paste0(file.name), 
+    na = "0", skip = 4, col_names = TRUE)
+  
+    ##--Shaping Paramters may change (Current/Constant)
 
   # Basic Shaping (remove blank cols)
-  orig <- orig %>% 
+    orig <- orig %>% 
     select(-2,-3) 
 
-  # Easy to create Universal Col Header
-    n <-  1948:2025
-    my.col.header <- c("Public Law Title", n)
+  # create Universal Col Header
+    my.col.header <- c("Public Law Title", fiscal.years)
     names(orig) <- my.col.header
 
-  ## End orig
-  
-  ## Splice off "Current Dollars" amounts
+  ## End orig---
+    
+  # !!DANGER: ASSUMES DF ROWS (CURRENT/CONSTANT) SAME SIZE FROM YEAR TO YEAR  
     current <- orig %>% 
-      slice(1:10) %>% #< This assumes no more accounts will be added. In FY2020, one was.
-      slice(-1) %>% 
+      slice(2:9) %>% #< This assumes no more accounts will be added. In FY2020, one was.
       mutate(deflator.type = "current")
 
   ## Splice off "Constant Dollars" amounts
   constant  <- orig %>% 
-    slice(12:20) %>% #< This assumes no more accounts will be added. In FY2020, one was.
+    slice(12:19) %>% #< This assumes no more accounts will be added. In FY2020, one was.
       mutate(deflator.type = "constant")
 
+  ##--COMBINE Current/Constant
+  
   # Combine Current and Constant Datasets
   combined <- bind_rows(constant, current)
 
@@ -91,24 +108,29 @@ nettle_clean <- function(location.of.file, my.table.number, dod.service){
   #   Inputs: zip.url, spreadsheet.name, my.table.number, dod.service
 
   # Download 6-19
-    location.of.file <- paste0(my.filename,"FY21 PB Green Book Table 6-19.xlsx")
+    file.name <- paste0(chapter.6.raw.data.folder,tbl.6.19.Army)
     my.table.number <- "tbl.6-19"
     my.dod.service <- "Army"
-    army <- nettle_clean(location.of.file = location.of.file, 
+    army <- nettle_clean(file.name = file.name, 
                          my.table.number, 
                          my.dod.service)
   
   # Download 6-20  
-    location.of.file <- paste0(my.filename,"FY21 PB Green Book Table 6-20.xlsx")
+    file.name <- paste0(chapter.6.raw.data.folder,tbl.6.20.Navy)
     my.table.number <- "tbl.6-20"
     my.dod.service <- "Navy"
-    navy <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
+    navy <- nettle_clean(file.name = file.name, 
+                         my.table.number, 
+                         my.dod.service)
   
   # Download 6-21  
-    location.of.file <- paste0(my.filename,"FY21 PB Green Book Table 6-21.xlsx")
+    file.name <- paste0(chapter.6.raw.data.folder, tbl.6.21.USAF)
     my.table.number <- "tbl.6-21"
     my.dod.service <- "Air.Force"
-    air.force <- nettle_clean(location.of.file = location.of.file, my.table.number, my.dod.service)
+    air.force <- nettle_clean(file.name = file.name, 
+                         my.table.number, 
+                         my.dod.service)
+  
   
 # tidy --------------------------------------------------------------------
 
@@ -126,16 +148,12 @@ ba.by.title <- bind_rows(army, navy, air.force) %>%
              source.table,
              data.notes)
 
-# # Addind in FY2021 to accommodate new data shape
-#   ba.by.title <- ba.by.title %>% 
-#     filter(!str_detect(`Public Law Title`, "Constant")) %>% 
-#     filter(!str_detect(`Public Law Title`, "Current")) 
 
 # Complete and Export as .csv -----------------------------------------------------
 
 # Filename
 mylocation <- "./Data/Processed"
-myfilename <- "tbl.6.19-6.21_BA.by.Service.and.Title"
+myfilename <- "GBook_tbl.6.19-6.21_BA.by.Service.and.Title"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
 
 my.file <- sprintf("%s/%s_%s.csv", mylocation, myfilename, mydate)
