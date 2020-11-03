@@ -102,8 +102,7 @@ my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, source.table, mydate)
                                        rep("non.pay", 5) ),
                                        2)
 
-                                   
-           
+
         #Rearrange
          df.1 <- df.1 %>% 
            select(
