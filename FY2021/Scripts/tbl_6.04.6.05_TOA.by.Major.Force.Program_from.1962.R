@@ -26,6 +26,7 @@
           budget.type       <-     "TOA"
           source.table.1    <-     "tbl.6.04_Current.TOA.by.Major.Force.Program"
           source.table.2    <-     "tbl.6.05_Constant.TOA.by.Major.Force.Program"
+          source.table.all <-     "tbl.6.04.and.6.05_TOA.by.Major.Force.Program"
 
 # names won't change annually?
         valid.names <- c(    "FY",
@@ -67,7 +68,7 @@ import.file.name.2 <- paste0(chapter.6.raw.data.folder,
 # export labelling
 mylocation <- "./Data/Processed"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
-my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, source.table, mydate)
+my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, source.table.all, mydate)
 
 
 # Methodology -------------------------------------------------------------
