@@ -60,10 +60,10 @@ import.file.name.2 <- paste0(chapter.6.raw.data.folder,
                     my.filename.2)          
 
 #ranges
-  col.limit <- ( (current.FY + 4) - 1962) + first.row.of.data #<-begin in FY1962 
+  row.limit <- ( (current.FY + 4) - 1962) + first.row.of.data #<-begin in FY1962 
   my.range <- str_c("A",first.row.of.data, 
                     ":", 
-                    "P", col.limit)
+                    "P", row.limit)
 
 # export labelling
 mylocation <- "./Data/Processed"
