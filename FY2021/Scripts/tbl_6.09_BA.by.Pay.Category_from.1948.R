@@ -157,6 +157,6 @@ mylocation <- "./Data/Processed"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
 my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, export.filename, mydate)          
           
-write_csv(final.df, my.export.filename)
+write_csv(combined.pay.category, my.export.filename)
 
 
