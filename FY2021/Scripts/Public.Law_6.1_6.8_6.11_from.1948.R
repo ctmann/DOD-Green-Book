@@ -33,6 +33,9 @@
                              "OCO.placeholder"
                              ), 2) 
 
+#' name of first column
+        first.col.name <- "public.law.title"
+        
 #'  Preferred Export filename
     export.filename <- "Public.Law.since.1948_TOA.BA.Outlays"
       
@@ -65,6 +68,7 @@ clean.function <- function(
                          my.filename,      #<- changes
                          source.table,     #<- changes
                          budget.type,      #<- changes
+                         intro.col.name = first.col.name,
                          folder = chapter.6.raw.data.folder, 
                          valid.row.range = row.range,
                          valid.row.names = row.names) {
@@ -83,9 +87,9 @@ clean.function <- function(
     
           # FY Colnames (based on size of dataset--brittle)
           FY.colnames <- str_c(1948:(1948+(ncol(df.1)-2) )) #<FY must be text (for tidy)
-          colnames(df.1) <- c("public.law.title",      #<First col is public law title
+          colnames(df.1) <- c(intro.col.name,     #<First colname
                               FY.colnames) 
-          
+           
           # Rename left col (header rows)
           df.1[,1] <- valid.row.names
 
@@ -111,7 +115,7 @@ clean.function <- function(
                  source.table,
                  budget.type, 
                  deflator.type,
-                 public.law.title,
+                 1,
                  everything() )                    
                                
       #Tidy and formatting-#-#-#-#-#-#-#--#-#-#--#-#-#-
@@ -129,7 +133,7 @@ clean.function <- function(
 
 # Export as .csv -----------------------------------------------------
 
-combined.pay.category <- bind_rows(
+combined <- bind_rows(
                             #tbl 6-2 TOA
                             clean.function(my.filename  = my.filename.1,
                                            source.table = source.table.1,

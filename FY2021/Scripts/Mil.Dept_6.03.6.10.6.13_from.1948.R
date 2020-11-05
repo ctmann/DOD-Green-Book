@@ -18,31 +18,28 @@
         chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
 #' 
 #'  Identify rows for constant and current
-        row.range <- c( 7:16,    #<- Current
-                       19:28)    #<- Constant 
+        row.range <-  c( 7:11, #<--  Current
+                        14:18) #<--  Curent Non.Pay
 
-        row.names <-  rep(c( "military.personnel",
-                             "retired.pay.Defense",
-                             "OM",
-                             "procurement",
-                             "RDTE",
-                             "MILCON",
-                             "family.housing",
-                             "revolving.and.management.funds",
-                             "trust.receipts.and.other",
-                             "OCO.placeholder"
-                             ), 2) 
-
+        row.names <-  rep(c("army",
+                             "navy",
+                             "air.force",
+                             "defense.wide",
+                             "OCO.place.holder"),
+                                           2)
+#' name of first column
+        first.col.name <- "military.dept"
+        
 #'  Preferred Export filename
-    export.filename <- "Public.Law.since.1948_TOA.BA.Outlays"
+    export.filename <- "Military.Dept.since.1948_TOA.BA.Outlays"
       
                 
 #' #-#-#-#-#-#-# Indvidual File Info May Change #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 #'       Update Name of specific files
-         my.filename.1 <- "FY21 PB Green Book Table 6-1.xlsx" #<--  TOA by pay category
-         my.filename.2 <- "FY21 PB Green Book Table 6-8.xlsx" #<--  BA by pay category
-         my.filename.3 <- "FY21 PB Green Book Table 6-11.xlsx" #<-- Outlays by pay category
+         my.filename.1 <- "FY21 PB Green Book Table 6-3.xlsx" #<--   TOA by military dept
+         my.filename.2 <- "FY21 PB Green Book Table 6-10.xlsx" #<--  BA by military dept
+         my.filename.3 <- "FY21 PB Green Book Table 6-13.xlsx" #<--  Outlays by military dept
 
  #'       Update Name of specific files
          budget.type.1        <-     "TOA"
@@ -50,10 +47,19 @@
          budget.type.3        <-     "Outlays"
 
 #'       Update Name of specific files
-         source.table.1       <-     "tbl.6.01.TOA.by.Public.Law" 
-         source.table.2       <-     "tbl.6.08.BA.by.Public.Law" 
-         source.table.3       <-     "tbl.6.11.BA.by.Public.Law" 
+         source.table.1       <-     "tbl.6.03.TOA.by.Public.Law" 
+         source.table.2       <-     "tbl.6.10.BA.by.Public.Law" 
+         source.table.3       <-     "tbl.6.13.BA.by.Public.Law" 
         
+             #Testing: Delete this           
+                         my.filename <- my.filename.1
+                         source.table <- source.table.1
+                         budget.type <- budget.type.1
+                         folder <- chapter.6.raw.data.folder
+                         intro.col.name <- first.col.name
+                         valid.row.range <- row.range
+                         valid.row.names <-row.names
+         
                 
 # Libraries ---------------------------------------------------------------
 library(tidyverse)
@@ -65,7 +71,8 @@ clean.function <- function(
                          my.filename,      #<- changes
                          source.table,     #<- changes
                          budget.type,      #<- changes
-                         folder = chapter.6.raw.data.folder, 
+                         folder = chapter.6.raw.data.folder,
+                         intro.col.name = first.col.name,
                          valid.row.range = row.range,
                          valid.row.names = row.names) {
 
@@ -83,7 +90,8 @@ clean.function <- function(
     
           # FY Colnames (based on size of dataset--brittle)
           FY.colnames <- str_c(1948:(1948+(ncol(df.1)-2) )) #<FY must be text (for tidy)
-          colnames(df.1) <- c("public.law.title",      #<First col is public law title
+          
+          colnames(df.1) <- c(intro.col.name,     #<First colname
                               FY.colnames) 
           
           # Rename left col (header rows)
@@ -107,11 +115,10 @@ clean.function <- function(
           
         #Rearrange
          df.1 <- df.1 %>% 
-           select(
+           select(1,  #<- this might vary, so id by position
                  source.table,
                  budget.type, 
                  deflator.type,
-                 public.law.title,
                  everything() )                    
                                
       #Tidy and formatting-#-#-#-#-#-#-#--#-#-#--#-#-#-
