@@ -1,9 +1,9 @@
-#' Public Law Title from 1948
+#' Military Dept. from 1948
 #' Includes discretionary and mandatory
 #' 
-#' 6.01 TOA
-#' 6.08 BA
-#' 6.11 Outlays
+#' 6.03 TOA
+#' 6.10 BA
+#' 6.13 Outlays
 #' 
 #' # How to Update this File -------------------------------------------------
 
@@ -40,9 +40,9 @@
 #' #-#-#-#-#-#-# Indvidual File Info May Change #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 #'       Update Name of specific files
-         my.filename.1 <- "FY21 PB Green Book Table 6-1.xlsx" #<--  TOA by public law
-         my.filename.2 <- "FY21 PB Green Book Table 6-8.xlsx" #<--  BA by public law
-         my.filename.3 <- "FY21 PB Green Book Table 6-11.xlsx" #<-- Outlays by public law
+         my.filename.1 <- "FY21 PB Green Book Table 6-1.xlsx" #<--  TOA by pay category
+         my.filename.2 <- "FY21 PB Green Book Table 6-8.xlsx" #<--  BA by pay category
+         my.filename.3 <- "FY21 PB Green Book Table 6-11.xlsx" #<-- Outlays by pay category
 
  #'       Update Name of specific files
          budget.type.1        <-     "TOA"
@@ -52,7 +52,7 @@
 #'       Update Name of specific files
          source.table.1       <-     "tbl.6.01.TOA.by.Public.Law" 
          source.table.2       <-     "tbl.6.08.BA.by.Public.Law" 
-         source.table.3       <-     "tbl.6.11.Outlays.by.Public.Law" 
+         source.table.3       <-     "tbl.6.11.BA.by.Public.Law" 
         
                 
 # Libraries ---------------------------------------------------------------
