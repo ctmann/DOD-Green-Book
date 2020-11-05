@@ -115,10 +115,11 @@ clean.function <- function(
           
         #Rearrange
          df.1 <- df.1 %>% 
-           select(1,  #<- this might vary, so id by position
+           select(
                  source.table,
                  budget.type, 
                  deflator.type,
+                 1,  #<- this might vary, so id by position
                  everything() )                    
                                
       #Tidy and formatting-#-#-#-#-#-#-#--#-#-#--#-#-#-
@@ -136,7 +137,7 @@ clean.function <- function(
 
 # Export as .csv -----------------------------------------------------
 
-combined.pay.category <- bind_rows(
+combined <- bind_rows(
                             #tbl 6-2 TOA
                             clean.function(my.filename  = my.filename.1,
                                            source.table = source.table.1,
@@ -157,7 +158,7 @@ mylocation <- "./Data/Processed"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
 my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, export.filename, mydate)          
           
-write_csv(combined.pay.category, my.export.filename)
+write_csv(combined, my.export.filename)
 
 
 

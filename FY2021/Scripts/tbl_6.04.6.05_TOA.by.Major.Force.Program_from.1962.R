@@ -45,7 +45,11 @@
                              "OCO.placeholder",
                              "other"
                              )  
-                
+
+#'  Preferred Export filename
+    export.filename <- "Major.Force.Program.since.1962_TOA"
+      
+                                
 # Libraries ---------------------------------------------------------------
 library(tidyverse)
 library(readxl)
@@ -68,7 +72,7 @@ import.file.name.2 <- paste0(chapter.6.raw.data.folder,
 # export labelling
 mylocation <- "./Data/Processed"
 mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
-my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, source.table.all, mydate)
+my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, export.filename, mydate)
 
 
 # Methodology -------------------------------------------------------------
