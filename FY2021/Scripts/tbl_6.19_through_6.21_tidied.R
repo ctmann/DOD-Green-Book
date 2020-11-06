@@ -148,6 +148,7 @@ ba.by.title <- bind_rows(army, navy, air.force) %>%
              source.table,
              data.notes)
 
+     ba.by.title
 
 # Complete and Export as .csv -----------------------------------------------------
 
