@@ -6,7 +6,7 @@ R Tidied and Cleaned National Defense Budget Estimates
 
 ## Description of Included Documents
 | Common Var | Begin FY| Table Numbers and Budget Type|
-|------------|-------------|
+|------------|---------|------------------------------|
 |Public Law Title| 1948 | 6-1 (TOA), 6-8 (BA), 6-11 (Outlays)|
 |Pay Category|1948|6-2 (TOA), 6-9 (BA), 6-12 (Outlays)|
 |Military Dept.|1948|6-3 (TOA), 6-10 (BA), 6-13 (Outlays)|
