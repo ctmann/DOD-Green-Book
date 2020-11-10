@@ -2,12 +2,10 @@
 R Tidied and Cleaned National Defense Budget Estimates 
 [National Defense Budget Estimates for FY XXXX (Green Book)](http://comptroller.defense.gove/Budget-Materials/)
 
-## Summary of Included Documents
-
-
 ## Description of Included Documents
 * tbl_2.1 Base and Supps (war funding) since 2001
-* tbl_5.1 and 5.6 Deflators
+* tbl_5.1 and 5.6 Deflators from 1970
+* tbl_7.5 End Strength from 1940
 
 ### Chapter 6 Files
 Dataset Number| Common Var | Begin FY| Table Numbers and Budget Type|
