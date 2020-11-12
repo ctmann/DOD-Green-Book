@@ -50,17 +50,7 @@
          source.table.1       <-     "tbl.6.03.TOA.by.Public.Law" 
          source.table.2       <-     "tbl.6.10.BA.by.Public.Law" 
          source.table.3       <-     "tbl.6.13.BA.by.Public.Law" 
-        
-             #Testing: Delete this           
-                         my.filename <- my.filename.1
-                         source.table <- source.table.1
-                         budget.type <- budget.type.1
-                         folder <- chapter.6.raw.data.folder
-                         intro.col.name <- first.col.name
-                         valid.row.range <- row.range
-                         valid.row.names <-row.names
-         
-                
+
 # Libraries ---------------------------------------------------------------
 library(tidyverse)
 library(readxl)
