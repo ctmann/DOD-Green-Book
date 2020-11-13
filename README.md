@@ -8,18 +8,11 @@ R Tidied and Cleaned National Defense Budget Estimates
 * tbl_7.5 End Strength from 1940
 
 ### 7.6 U.S. Labor Force 
-* Total DOD Employment = Active Duty military + DOD Civilian Direct Hires
-* Total Federal Civilian Employment = DOD Civilian Direct Hires + 
-                                      Other Federal Civil Service
-   
-* Total Federal Employment =  Active Duty military + 
-                               DOD Civilian Direct Hires + 
-                               Other Federal Civil Service + 
-                               Coast Guard
-
-* Total US Employment = Total Federal Employment (see above) +
-                         State and Local Gov't + 
-                         U.S. Private Sector Employment
+|Total Title|Formula (calculated from +employment.category* variable)|
+|Total DOD Employment |Active Duty military + DOD Civilian Direct Hires
+|Total Federal Civilian Employment |DOD Civilian Direct Hires + Other Federal Civil Service
+| Total Federal Employment |Active Duty military +  DOD Civilian Direct Hires +  Other Federal Civil Service + Coast Guard
+|Total US Employment | Total Federal Employment (see above) +State and Local Gov't +  U.S. Private Sector Employment
 
 ### Chapter 6 Files
 Dataset Number| Common Var | Begin FY| Table Numbers and Budget Type|
