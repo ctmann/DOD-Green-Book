@@ -42,7 +42,7 @@ library(stringr)
         setwd("./DOD-Green-Book/FY2021")
         
 #'   -> Verify Export name
-        export.filename <- "..."  
+        export.filename <- "tbl_7.6_total.us.labor.force"  
         
 #'  #-#-#-#-#-#-#-#- This probably will NOT change #-#-#-#-#-#-#-#-#-#-#-#-
 #' Includes table ranges and names
@@ -70,6 +70,13 @@ library(stringr)
         
 # Common Vars -------------------------------------------------------------
 first.fy <- 1940
+
+# export labelling
+mylocation <- "./Data/Processed"
+mydate <- paste('Updated', format(Sys.time(), format = "_%Y-%m-%d_%H%M") , sep = "")
+my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, export.filename, mydate)                                            
+                      
+                      
                       
 # Import ------------------------------------------------------------------
 df.1 <- read_excel(raw.filename,
@@ -102,19 +109,14 @@ df.2 <- gather(df.1, key = employment.category,
                -FY) %>% 
         mutate(amount = amount *1e3)
 
+final.df <- df.2
 
 
+# Export as .csv -----------------------------------------------------
 
+# Export
+write_csv(final.df, my.export.filename)
 
-
-                        
-
-                      
-        
-        
-        
-        
-        
         
         
         
