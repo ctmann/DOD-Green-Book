@@ -9,6 +9,7 @@ R Tidied and Cleaned National Defense Budget Estimates
 
 ### 7.6 U.S. Labor Force 
 |Total Title|Formula (calculated from +employment.category* variable)|
+|------------|------------|
 |Total DOD Employment |Active Duty military + DOD Civilian Direct Hires
 |Total Federal Civilian Employment |DOD Civilian Direct Hires + Other Federal Civil Service
 | Total Federal Employment |Active Duty military +  DOD Civilian Direct Hires +  Other Federal Civil Service + Coast Guard
