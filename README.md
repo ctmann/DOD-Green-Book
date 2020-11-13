@@ -8,7 +8,7 @@ R Tidied and Cleaned National Defense Budget Estimates
 * tbl_7.5 End Strength from 1940
 
 ### 7.6 U.S. Labor Force 
-|Total Title|Formula (calculated from +employment.category* variable)|
+|Total Title|Formula (calculated from + *employment.category* variable)|
 |------------|------------|
 |Total DOD Employment |Active Duty military + DOD Civilian Direct Hires
 |Total Federal Civilian Employment |DOD Civilian Direct Hires + Other Federal Civil Service
