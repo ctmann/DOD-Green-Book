@@ -123,7 +123,7 @@ clean.function <- function(
   
 # Import    
 df.1 <- read_excel(raw.filename, col_names=F)
-
+df.1
 
 # Reshaping ---------------------------------------------------------------
 
