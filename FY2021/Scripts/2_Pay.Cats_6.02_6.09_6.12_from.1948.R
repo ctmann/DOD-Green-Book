@@ -34,7 +34,7 @@
                                            2)
 
 #'  Preferred Export filename
-    export.filename <- "2_Pay.Category.since.1948_TOA.BA.Outlays"
+    export.filename <- "2_Pay.Category.since.1948_BA.Outlays.TOA"
       
                 
 #' #-#-#-#-#-#-# Indvidual File Info May Change #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
