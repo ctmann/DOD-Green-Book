@@ -34,7 +34,7 @@ library(stringr)
         setwd("./DOD-Green-Book/FY2021")
         
 #'   -> Verify Export name
-        export.filename <- "Public.Law.by.Mil.Dept_since.1948_TOA.BA.Outlays"  
+        export.filename <- "6_Public.Law.by.Mil.Dept.since.1948_BA.Outlays.TOA"  
 #'                
 #'  #-#-#-#-#-#-#-#- This probably will NOT change #-#-#-#-#-#-#-#-#-#-#-#-
 #' Includes table ranges and names
