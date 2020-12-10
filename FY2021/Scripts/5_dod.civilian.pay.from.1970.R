@@ -128,8 +128,13 @@ my.export.filename <- sprintf("%s/%s_%s.csv", mylocation, export.filename, mydat
             #dollars.in.thousands
           df.2$amount <- df.2$amount * 1e3
           
-
+final.df <- df.2
   
+# Export as .csv -----------------------------------------------------
+
+# Export
+write_csv(final.df, my.export.filename)
+
   
   
   
