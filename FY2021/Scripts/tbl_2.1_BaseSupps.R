@@ -135,7 +135,7 @@ tidy_grnbook_supps_table <- function(t){
   
   base <- unique.public.laws[1]
   OCO.GWOT <- unique.public.laws[c(2,8)]
-  emergency.relief <- unique.public.laws[c(4,5,6,9,10,12)]
+  emergency.relief <- unique.public.laws[c(4,5,6,9,10,12,14,15)]
   other <- unique.public.laws[c(3,7,11)]
   
   # Assign vars to column  
