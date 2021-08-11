@@ -9,19 +9,19 @@
 #'   Download Comptroller data to Raw folder (manually).
 #'
 #'   Set working Directory to current year:
-        setwd("./DOD-Green-Book/FY2021")
+        setwd("./DOD-Green-Book/FY2022")
 #'
 #'   Chapter 6 raw data folder, files
-        chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
+        chapter.6.raw.data.folder <- "./Data/Raw/FY22 PB Green Book Chap 6/"
 #' 
 #'  Identify rows for constant and current
         row.range <- c( 
                          7:9, #<--  Current Pay
                         11:14, #<-- Curent Non.Pay
-                        16,   #<--  Current.OCO.placeholder
-                        19:21, #<-- Constant Pay
-                        23:26, #<-- Contant Non.Pay
-                        28)    #<-- Constant.OCO.placeholder
+                        #16,   #<--  Legacy: Current.OCO.placeholder
+                        18:20, #<-- Constant Pay
+                        22:25) #<-- Contant Non.Pay
+                        #28)  #<-- Legacy: Constant.OCO.placeholder
 
         row.names <- rep(c("civilian.pay",
                             "military.pay",
@@ -29,8 +29,7 @@
                             "medicare.eligible.retired.health.fund.contributions",
                             "other.military.personnel",
                             "non.pay.operations",
-                            "non.pay.investment",
-                            "OCO.place.holder"),
+                            "non.pay.investment"),
                                            2)
 
 #'  Preferred Export filename
@@ -40,9 +39,9 @@
 #' #-#-#-#-#-#-# Indvidual File Info May Change #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 #'       Update Name of specific files
-         my.filename.1 <- "FY21 PB Green Book Table 6-2.xlsx" #<-- TOA by pay category
-         my.filename.2 <- "FY21 PB Green Book Table 6-9.xlsx" #<-- BA by pay category
-         my.filename.3 <- "FY21 PB Green Book Table 6-12.xlsx" #<-- Outlays by pay category
+         my.filename.1 <- "FY22 PB Green Book Table 6-2.xlsx" #<-- TOA by pay category
+         my.filename.2 <- "FY22 PB Green Book Table 6-9.xlsx" #<-- BA by pay category
+         my.filename.3 <- "FY22 PB Green Book Table 6-12.xlsx" #<-- Outlays by pay category
 
  #'       Update Name of specific files
          budget.type.1        <-     "TOA"
@@ -89,7 +88,7 @@ clean.function <- function(
           df.1[,1] <- valid.row.names
 
           # NAs to zeros
-          df.1[is.na(df.1)] <- 0
+          df.1[is.na(df.1)] <- "0"
 
       #Add meta cols-#-#-#-#-#-#-#--#-#-#--#-#-#-
           
@@ -107,8 +106,7 @@ clean.function <- function(
           # Repeat for Pay/non.Pay    
               df.1$pay.type <-     rep(
                                        c(rep("pay", 3),
-                                         rep("non.pay", 4),
-                                         "other"),
+                                         rep("non.pay", 4)),
                                        2)
 
         #Rearrange

@@ -5,17 +5,17 @@
 #' 6.08 BA
 #' 6.11 Outlays
 #' 
-#' # How to Update this File -------------------------------------------------
+# How to Update this File -------------------------------------------------
 
 #' #-#-#-#-#-#-# THIS WILL PROBABLY NOT CHANGE #-#-#-#-#-#-#-#-#-#-#-#-#-#
 #' 
 #'   Download Comptroller data to Raw folder (manually).
 #'
 #'   Set working Directory to current year:
-        setwd("./DOD-Green-Book/FY2021")
+        setwd("./DOD-Green-Book/FY2022")
 #'
 #'   Chapter 6 raw data folder, files
-        chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
+        chapter.6.raw.data.folder <- "./Data/Raw/FY22 PB Green Book Chap 6/"
 #' 
 #'  Identify rows for constant and current
         row.range <- c( 7:16,    #<- Current
@@ -43,9 +43,9 @@
 #' #-#-#-#-#-#-# Indvidual File Info May Change #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 #'       Update Name of specific files
-         my.filename.1 <- "FY21 PB Green Book Table 6-1.xlsx" #<--  TOA by public law
-         my.filename.2 <- "FY21 PB Green Book Table 6-8.xlsx" #<--  BA by public law
-         my.filename.3 <- "FY21 PB Green Book Table 6-11.xlsx" #<-- Outlays by public law
+         my.filename.1 <- "FY22 PB Green Book Table 6-1.xlsx" #<--  TOA by public law
+         my.filename.2 <- "FY22 PB Green Book Table 6-8.xlsx" #<--  BA by public law
+         my.filename.3 <- "FY22 PB Green Book Table 6-11.xlsx" #<-- Outlays by public law
 
  #'       Update Name of specific files
          budget.type.1        <-     "TOA"
@@ -94,7 +94,7 @@ clean.function <- function(
           df.1[,1] <- valid.row.names
 
           # NAs to zeros
-          df.1[is.na(df.1)] <- 0
+          df.1[is.na(df.1)] <- "0"
 
       #Add meta cols-#-#-#-#-#-#-#--#-#-#--#-#-#-
           
