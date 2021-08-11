@@ -1,0 +1,925 @@
+FY,Service,Active.or.Civilians,Personnel
+1940,Army,Active,218000
+1941,Army,Active,1310000
+1942,Army,Active,2311000
+1943,Army,Active,4797000
+1944,Army,Active,5622000
+1945,Army,Active,5984000
+1946,Army,Active,1435000
+1947,Army,Active,685000
+1948,Army,Active,554000
+1949,Army,Active,660000
+1950,Army,Active,593000
+1951,Army,Active,1532000
+1952,Army,Active,1596000
+1953,Army,Active,1534000
+1954,Army,Active,1405000
+1955,Army,Active,1109000
+1956,Army,Active,1026000
+1957,Army,Active,998000
+1958,Army,Active,899000
+1959,Army,Active,862000
+1960,Army,Active,873000
+1961,Army,Active,859000
+1962,Army,Active,1066000
+1963,Army,Active,976000
+1964,Army,Active,973000
+1965,Army,Active,969000
+1966,Army,Active,1200000
+1967,Army,Active,1442000
+1968,Army,Active,1570000
+1969,Army,Active,1512000
+1970,Army,Active,1322000
+1971,Army,Active,1123000
+1972,Army,Active,811000
+1973,Army,Active,801000
+1974,Army,Active,783000
+1975,Army,Active,784000
+1976,Army,Active,779000
+1977,Army,Active,782000
+1978,Army,Active,771000
+1979,Army,Active,758000
+1980,Army,Active,777000
+1981,Army,Active,781000
+1982,Army,Active,780000
+1983,Army,Active,780000
+1984,Army,Active,780000
+1985,Army,Active,781000
+1986,Army,Active,781000
+1987,Army,Active,781000
+1988,Army,Active,772000
+1989,Army,Active,770000
+1990,Army,Active,751000
+1991,Army,Active,725000
+1992,Army,Active,611000
+1993,Army,Active,572000
+1994,Army,Active,541000
+1995,Army,Active,509000
+1996,Army,Active,491000
+1997,Army,Active,492000
+1998,Army,Active,484000
+1999,Army,Active,479000
+2000,Army,Active,482000
+2001,Army,Active,481000
+2002,Army,Active,487000
+2003,Army,Active,499000
+2004,Army,Active,500000
+2005,Army,Active,492000
+2006,Army,Active,505000
+2007,Army,Active,522000
+2008,Army,Active,544000
+2009,Army,Active,553000
+2010,Army,Active,566000
+2011,Army,Active,566000
+2012,Army,Active,550000
+2013,Army,Active,532000
+2014,Army,Active,508000
+2015,Army,Active,491000
+2016,Army,Active,475000
+2017,Army,Active,476245
+2018,Army,Active,476000
+2019,Army,Active,484000
+2020,Army,Active,485000
+2021,Army,Active,486000
+2022,Army,Active,485000
+NA,Army,Active,NA
+1940,Navy,Active,161000
+1941,Navy,Active,284000
+1942,Navy,Active,641000
+1943,Navy,Active,1742000
+1944,Navy,Active,2981000
+1945,Navy,Active,3320000
+1946,Navy,Active,978000
+1947,Navy,Active,498000
+1948,Navy,Active,418000
+1949,Navy,Active,448000
+1950,Navy,Active,381000
+1951,Navy,Active,737000
+1952,Navy,Active,824000
+1953,Navy,Active,794000
+1954,Navy,Active,726000
+1955,Navy,Active,661000
+1956,Navy,Active,670000
+1957,Navy,Active,676000
+1958,Navy,Active,640000
+1959,Navy,Active,626000
+1960,Navy,Active,617000
+1961,Navy,Active,626000
+1962,Navy,Active,666000
+1963,Navy,Active,665000
+1964,Navy,Active,668000
+1965,Navy,Active,672000
+1966,Navy,Active,745000
+1967,Navy,Active,751000
+1968,Navy,Active,765000
+1969,Navy,Active,776000
+1970,Navy,Active,692000
+1971,Navy,Active,623000
+1972,Navy,Active,588000
+1973,Navy,Active,564000
+1974,Navy,Active,546000
+1975,Navy,Active,535000
+1976,Navy,Active,524000
+1977,Navy,Active,530000
+1978,Navy,Active,530000
+1979,Navy,Active,522000
+1980,Navy,Active,527000
+1981,Navy,Active,540000
+1982,Navy,Active,553000
+1983,Navy,Active,558000
+1984,Navy,Active,565000
+1985,Navy,Active,571000
+1986,Navy,Active,581000
+1987,Navy,Active,587000
+1988,Navy,Active,593000
+1989,Navy,Active,593000
+1990,Navy,Active,583000
+1991,Navy,Active,571000
+1992,Navy,Active,542000
+1993,Navy,Active,510000
+1994,Navy,Active,469000
+1995,Navy,Active,435000
+1996,Navy,Active,417000
+1997,Navy,Active,396000
+1998,Navy,Active,382000
+1999,Navy,Active,373000
+2000,Navy,Active,373000
+2001,Navy,Active,378000
+2002,Navy,Active,383000
+2003,Navy,Active,382000
+2004,Navy,Active,373000
+2005,Navy,Active,362000
+2006,Navy,Active,350000
+2007,Navy,Active,338000
+2008,Navy,Active,332000
+2009,Navy,Active,329000
+2010,Navy,Active,328000
+2011,Navy,Active,325000
+2012,Navy,Active,318000
+2013,Navy,Active,324000
+2014,Navy,Active,326000
+2015,Navy,Active,328000
+2016,Navy,Active,325000
+2017,Navy,Active,324000
+2018,Navy,Active,330000
+2019,Navy,Active,337000
+2020,Navy,Active,347000
+2021,Navy,Active,348000
+2022,Navy,Active,346000
+NA,Navy,Active,NA
+1940,Marine Corps,Active,28000
+1941,Marine Corps,Active,54000
+1942,Marine Corps,Active,143000
+1943,Marine Corps,Active,309000
+1944,Marine Corps,Active,476000
+1945,Marine Corps,Active,470000
+1946,Marine Corps,Active,156000
+1947,Marine Corps,Active,93000
+1948,Marine Corps,Active,85000
+1949,Marine Corps,Active,86000
+1950,Marine Corps,Active,74000
+1951,Marine Corps,Active,193000
+1952,Marine Corps,Active,232000
+1953,Marine Corps,Active,249000
+1954,Marine Corps,Active,224000
+1955,Marine Corps,Active,205000
+1956,Marine Corps,Active,201000
+1957,Marine Corps,Active,201000
+1958,Marine Corps,Active,189000
+1959,Marine Corps,Active,176000
+1960,Marine Corps,Active,171000
+1961,Marine Corps,Active,177000
+1962,Marine Corps,Active,191000
+1963,Marine Corps,Active,189000
+1964,Marine Corps,Active,189000
+1965,Marine Corps,Active,190000
+1966,Marine Corps,Active,261000
+1967,Marine Corps,Active,285000
+1968,Marine Corps,Active,307000
+1969,Marine Corps,Active,310000
+1970,Marine Corps,Active,260000
+1971,Marine Corps,Active,212000
+1972,Marine Corps,Active,198000
+1973,Marine Corps,Active,196000
+1974,Marine Corps,Active,189000
+1975,Marine Corps,Active,196000
+1976,Marine Corps,Active,192000
+1977,Marine Corps,Active,192000
+1978,Marine Corps,Active,191000
+1979,Marine Corps,Active,185000
+1980,Marine Corps,Active,188000
+1981,Marine Corps,Active,191000
+1982,Marine Corps,Active,192000
+1983,Marine Corps,Active,194000
+1984,Marine Corps,Active,196000
+1985,Marine Corps,Active,198000
+1986,Marine Corps,Active,199000
+1987,Marine Corps,Active,200000
+1988,Marine Corps,Active,197000
+1989,Marine Corps,Active,197000
+1990,Marine Corps,Active,197000
+1991,Marine Corps,Active,195000
+1992,Marine Corps,Active,185000
+1993,Marine Corps,Active,178000
+1994,Marine Corps,Active,174000
+1995,Marine Corps,Active,174000
+1996,Marine Corps,Active,175000
+1997,Marine Corps,Active,174000
+1998,Marine Corps,Active,173000
+1999,Marine Corps,Active,173000
+2000,Marine Corps,Active,173000
+2001,Marine Corps,Active,173000
+2002,Marine Corps,Active,174000
+2003,Marine Corps,Active,178000
+2004,Marine Corps,Active,178000
+2005,Marine Corps,Active,180000
+2006,Marine Corps,Active,180000
+2007,Marine Corps,Active,186000
+2008,Marine Corps,Active,199000
+2009,Marine Corps,Active,203000
+2010,Marine Corps,Active,202000
+2011,Marine Corps,Active,201000
+2012,Marine Corps,Active,198000
+2013,Marine Corps,Active,196000
+2014,Marine Corps,Active,188000
+2015,Marine Corps,Active,184000
+2016,Marine Corps,Active,184000
+2017,Marine Corps,Active,185000
+2018,Marine Corps,Active,186000
+2019,Marine Corps,Active,186000
+2020,Marine Corps,Active,181000
+2021,Marine Corps,Active,181000
+2022,Marine Corps,Active,179000
+NA,Marine Corps,Active,NA
+1940,Air Force,Active,51000
+1941,Air Force,Active,152000
+1942,Air Force,Active,764000
+1943,Air Force,Active,2197000
+1944,Air Force,Active,2372000
+1945,Air Force,Active,2282000
+1946,Air Force,Active,456000
+1947,Air Force,Active,306000
+1948,Air Force,Active,388000
+1949,Air Force,Active,419000
+1950,Air Force,Active,411000
+1951,Air Force,Active,788000
+1952,Air Force,Active,983000
+1953,Air Force,Active,978000
+1954,Air Force,Active,948000
+1955,Air Force,Active,960000
+1956,Air Force,Active,910000
+1957,Air Force,Active,920000
+1958,Air Force,Active,871000
+1959,Air Force,Active,840000
+1960,Air Force,Active,815000
+1961,Air Force,Active,821000
+1962,Air Force,Active,885000
+1963,Air Force,Active,870000
+1964,Air Force,Active,857000
+1965,Air Force,Active,825000
+1966,Air Force,Active,887000
+1967,Air Force,Active,897000
+1968,Air Force,Active,905000
+1969,Air Force,Active,862000
+1970,Air Force,Active,791000
+1971,Air Force,Active,755000
+1972,Air Force,Active,726000
+1973,Air Force,Active,691000
+1974,Air Force,Active,644000
+1975,Air Force,Active,613000
+1976,Air Force,Active,585000
+1977,Air Force,Active,570000
+1978,Air Force,Active,569000
+1979,Air Force,Active,559000
+1980,Air Force,Active,558000
+1981,Air Force,Active,570000
+1982,Air Force,Active,583000
+1983,Air Force,Active,592000
+1984,Air Force,Active,597000
+1985,Air Force,Active,602000
+1986,Air Force,Active,608000
+1987,Air Force,Active,607000
+1988,Air Force,Active,576000
+1989,Air Force,Active,571000
+1990,Air Force,Active,539000
+1991,Air Force,Active,511000
+1992,Air Force,Active,470000
+1993,Air Force,Active,444000
+1994,Air Force,Active,426000
+1995,Air Force,Active,400000
+1996,Air Force,Active,389000
+1997,Air Force,Active,378000
+1998,Air Force,Active,367000
+1999,Air Force,Active,361000
+2000,Air Force,Active,356000
+2001,Air Force,Active,354000
+2002,Air Force,Active,368000
+2003,Air Force,Active,375000
+2004,Air Force,Active,377000
+2005,Air Force,Active,352000
+2006,Air Force,Active,349000
+2007,Air Force,Active,333000
+2008,Air Force,Active,327000
+2009,Air Force,Active,333000
+2010,Air Force,Active,334000
+2011,Air Force,Active,333000
+2012,Air Force,Active,333000
+2013,Air Force,Active,331000
+2014,Air Force,Active,316000
+2015,Air Force,Active,311000
+2016,Air Force,Active,318000
+2017,Air Force,Active,323000
+2018,Air Force,Active,326000
+2019,Air Force,Active,332000
+2020,Air Force,Active,334000
+2021,Air Force,Active,327000
+2022,Air Force,Active,328000
+NA,Air Force,Active,NA
+1940,Space Force,Active,NA
+1941,Space Force,Active,NA
+1942,Space Force,Active,NA
+1943,Space Force,Active,NA
+1944,Space Force,Active,NA
+1945,Space Force,Active,NA
+1946,Space Force,Active,NA
+1947,Space Force,Active,NA
+1948,Space Force,Active,NA
+1949,Space Force,Active,NA
+1950,Space Force,Active,NA
+1951,Space Force,Active,NA
+1952,Space Force,Active,NA
+1953,Space Force,Active,NA
+1954,Space Force,Active,NA
+1955,Space Force,Active,NA
+1956,Space Force,Active,NA
+1957,Space Force,Active,NA
+1958,Space Force,Active,NA
+1959,Space Force,Active,NA
+1960,Space Force,Active,NA
+1961,Space Force,Active,NA
+1962,Space Force,Active,NA
+1963,Space Force,Active,NA
+1964,Space Force,Active,NA
+1965,Space Force,Active,NA
+1966,Space Force,Active,NA
+1967,Space Force,Active,NA
+1968,Space Force,Active,NA
+1969,Space Force,Active,NA
+1970,Space Force,Active,NA
+1971,Space Force,Active,NA
+1972,Space Force,Active,NA
+1973,Space Force,Active,NA
+1974,Space Force,Active,NA
+1975,Space Force,Active,NA
+1976,Space Force,Active,NA
+1977,Space Force,Active,NA
+1978,Space Force,Active,NA
+1979,Space Force,Active,NA
+1980,Space Force,Active,NA
+1981,Space Force,Active,NA
+1982,Space Force,Active,NA
+1983,Space Force,Active,NA
+1984,Space Force,Active,NA
+1985,Space Force,Active,NA
+1986,Space Force,Active,NA
+1987,Space Force,Active,NA
+1988,Space Force,Active,NA
+1989,Space Force,Active,NA
+1990,Space Force,Active,NA
+1991,Space Force,Active,NA
+1992,Space Force,Active,NA
+1993,Space Force,Active,NA
+1994,Space Force,Active,NA
+1995,Space Force,Active,NA
+1996,Space Force,Active,NA
+1997,Space Force,Active,NA
+1998,Space Force,Active,NA
+1999,Space Force,Active,NA
+2000,Space Force,Active,NA
+2001,Space Force,Active,NA
+2002,Space Force,Active,NA
+2003,Space Force,Active,NA
+2004,Space Force,Active,NA
+2005,Space Force,Active,NA
+2006,Space Force,Active,NA
+2007,Space Force,Active,NA
+2008,Space Force,Active,NA
+2009,Space Force,Active,NA
+2010,Space Force,Active,NA
+2011,Space Force,Active,NA
+2012,Space Force,Active,NA
+2013,Space Force,Active,NA
+2014,Space Force,Active,NA
+2015,Space Force,Active,NA
+2016,Space Force,Active,NA
+2017,Space Force,Active,NA
+2018,Space Force,Active,NA
+2019,Space Force,Active,NA
+2020,Space Force,Active,NA
+2021,Space Force,Active,6000
+2022,Space Force,Active,8000
+NA,Space Force,Active,NA
+1940,Full Time Guard and Reserve,Active,0
+1941,Full Time Guard and Reserve,Active,0
+1942,Full Time Guard and Reserve,Active,0
+1943,Full Time Guard and Reserve,Active,0
+1944,Full Time Guard and Reserve,Active,0
+1945,Full Time Guard and Reserve,Active,0
+1946,Full Time Guard and Reserve,Active,0
+1947,Full Time Guard and Reserve,Active,0
+1948,Full Time Guard and Reserve,Active,0
+1949,Full Time Guard and Reserve,Active,0
+1950,Full Time Guard and Reserve,Active,0
+1951,Full Time Guard and Reserve,Active,0
+1952,Full Time Guard and Reserve,Active,0
+1953,Full Time Guard and Reserve,Active,0
+1954,Full Time Guard and Reserve,Active,0
+1955,Full Time Guard and Reserve,Active,0
+1956,Full Time Guard and Reserve,Active,0
+1957,Full Time Guard and Reserve,Active,0
+1958,Full Time Guard and Reserve,Active,0
+1959,Full Time Guard and Reserve,Active,0
+1960,Full Time Guard and Reserve,Active,0
+1961,Full Time Guard and Reserve,Active,0
+1962,Full Time Guard and Reserve,Active,0
+1963,Full Time Guard and Reserve,Active,0
+1964,Full Time Guard and Reserve,Active,0
+1965,Full Time Guard and Reserve,Active,0
+1966,Full Time Guard and Reserve,Active,0
+1967,Full Time Guard and Reserve,Active,0
+1968,Full Time Guard and Reserve,Active,0
+1969,Full Time Guard and Reserve,Active,0
+1970,Full Time Guard and Reserve,Active,1000
+1971,Full Time Guard and Reserve,Active,1000
+1972,Full Time Guard and Reserve,Active,1000
+1973,Full Time Guard and Reserve,Active,1000
+1974,Full Time Guard and Reserve,Active,1000
+1975,Full Time Guard and Reserve,Active,1000
+1976,Full Time Guard and Reserve,Active,1000
+1977,Full Time Guard and Reserve,Active,1000
+1978,Full Time Guard and Reserve,Active,1000
+1979,Full Time Guard and Reserve,Active,7000
+1980,Full Time Guard and Reserve,Active,13000
+1981,Full Time Guard and Reserve,Active,19000
+1982,Full Time Guard and Reserve,Active,22000
+1983,Full Time Guard and Reserve,Active,39000
+1984,Full Time Guard and Reserve,Active,46000
+1985,Full Time Guard and Reserve,Active,55000
+1986,Full Time Guard and Reserve,Active,64000
+1987,Full Time Guard and Reserve,Active,69000
+1988,Full Time Guard and Reserve,Active,71000
+1989,Full Time Guard and Reserve,Active,72000
+1990,Full Time Guard and Reserve,Active,74000
+1991,Full Time Guard and Reserve,Active,75000
+1992,Full Time Guard and Reserve,Active,72000
+1993,Full Time Guard and Reserve,Active,71000
+1994,Full Time Guard and Reserve,Active,68000
+1995,Full Time Guard and Reserve,Active,65000
+1996,Full Time Guard and Reserve,Active,66000
+1997,Full Time Guard and Reserve,Active,64000
+1998,Full Time Guard and Reserve,Active,64000
+1999,Full Time Guard and Reserve,Active,65000
+2000,Full Time Guard and Reserve,Active,65000
+2001,Full Time Guard and Reserve,Active,65000
+2002,Full Time Guard and Reserve,Active,66000
+2003,Full Time Guard and Reserve,Active,66000
+2004,Full Time Guard and Reserve,Active,66000
+2005,Full Time Guard and Reserve,Active,69000
+2006,Full Time Guard and Reserve,Active,71000
+2007,Full Time Guard and Reserve,Active,72000
+2008,Full Time Guard and Reserve,Active,72000
+2009,Full Time Guard and Reserve,Active,75000
+2010,Full Time Guard and Reserve,Active,76000
+2011,Full Time Guard and Reserve,Active,76000
+2012,Full Time Guard and Reserve,Active,77000
+2013,Full Time Guard and Reserve,Active,77000
+2014,Full Time Guard and Reserve,Active,77000
+2015,Full Time Guard and Reserve,Active,76000
+2016,Full Time Guard and Reserve,Active,76000
+2017,Full Time Guard and Reserve,Active,75000
+2018,Full Time Guard and Reserve,Active,79000
+2019,Full Time Guard and Reserve,Active,83000
+2020,Full Time Guard and Reserve,Active,87000
+2021,Full Time Guard and Reserve,Active,90000
+2022,Full Time Guard and Reserve,Active,93000
+NA,Full Time Guard and Reserve,Active,NA
+1940,Army,Civilians,137000
+1941,Army,Civilians,329000
+1942,Army,Civilians,852000
+1943,Army,Civilians,1545000
+1944,Army,Civilians,1503000
+1945,Army,Civilians,1881000
+1946,Army,Civilians,927000
+1947,Army,Civilians,503000
+1948,Army,Civilians,303000
+1949,Army,Civilians,310000
+1950,Army,Civilians,261000
+1951,Army,Civilians,487000
+1952,Army,Civilians,515000
+1953,Army,Civilians,884000
+1954,Army,Civilians,720000
+1955,Army,Civilians,651000
+1956,Army,Civilians,592000
+1957,Army,Civilians,571000
+1958,Army,Civilians,530000
+1959,Army,Civilians,497000
+1960,Army,Civilians,473000
+1961,Army,Civilians,472000
+1962,Army,Civilians,476000
+1963,Army,Civilians,459000
+1964,Army,Civilians,430000
+1965,Army,Civilians,414000
+1966,Army,Civilians,450000
+1967,Army,Civilians,516000
+1968,Army,Civilians,510000
+1969,Army,Civilians,531000
+1970,Army,Civilians,480000
+1971,Army,Civilians,452000
+1972,Army,Civilians,446000
+1973,Army,Civilians,406000
+1974,Army,Civilians,409000
+1975,Army,Civilians,401000
+1976,Army,Civilians,390000
+1977,Army,Civilians,372000
+1978,Army,Civilians,371000
+1979,Army,Civilians,359000
+1980,Army,Civilians,361000
+1981,Army,Civilians,372000
+1982,Army,Civilians,378000
+1983,Army,Civilians,391000
+1984,Army,Civilians,403000
+1985,Army,Civilians,420000
+1986,Army,Civilians,413000
+1987,Army,Civilians,418000
+1988,Army,Civilians,393000
+1989,Army,Civilians,403000
+1990,Army,Civilians,380000
+1991,Army,Civilians,365000
+1992,Army,Civilians,334000
+1993,Army,Civilians,294000
+1994,Army,Civilians,280000
+1995,Army,Civilians,267000
+1996,Army,Civilians,259000
+1997,Army,Civilians,247000
+1998,Army,Civilians,237000
+1999,Army,Civilians,227000
+2000,Army,Civilians,221000
+2001,Army,Civilians,220000
+2002,Army,Civilians,224000
+2003,Army,Civilians,224000
+2004,Army,Civilians,227000
+2005,Army,Civilians,231000
+2006,Army,Civilians,237000
+2007,Army,Civilians,238000
+2008,Army,Civilians,246000
+2009,Army,Civilians,263000
+2010,Army,Civilians,276000
+2011,Army,Civilians,284000
+2012,Army,Civilians,275000
+2013,Army,Civilians,256000
+2014,Army,Civilians,207000
+2015,Army,Civilians,206000
+2016,Army,Civilians,195000
+2017,Army,Civilians,191000
+2018,Army,Civilians,189000
+2019,Army,Civilians,190000
+2020,Army,Civilians,191000
+2021,Army,Civilians,195000
+2022,Army,Civilians,197000
+NA,Army,Civilians,NA
+1940,Navy and Marine Corps,Civilians,119000
+1941,Navy and Marine Corps,Civilians,227000
+1942,Navy and Marine Corps,Civilians,432000
+1943,Navy and Marine Corps,Civilians,648000
+1944,Navy and Marine Corps,Civilians,736000
+1945,Navy and Marine Corps,Civilians,747000
+1946,Navy and Marine Corps,Civilians,489000
+1947,Navy and Marine Corps,Civilians,356000
+1948,Navy and Marine Corps,Civilians,347000
+1949,Navy and Marine Corps,Civilians,343000
+1950,Navy and Marine Corps,Civilians,293000
+1951,Navy and Marine Corps,Civilians,452000
+1952,Navy and Marine Corps,Civilians,481000
+1953,Navy and Marine Corps,Civilians,470000
+1954,Navy and Marine Corps,Civilians,433000
+1955,Navy and Marine Corps,Civilians,433000
+1956,Navy and Marine Corps,Civilians,416000
+1957,Navy and Marine Corps,Civilians,411000
+1958,Navy and Marine Corps,Civilians,381000
+1959,Navy and Marine Corps,Civilians,375000
+1960,Navy and Marine Corps,Civilians,365000
+1961,Navy and Marine Corps,Civilians,363000
+1962,Navy and Marine Corps,Civilians,365000
+1963,Navy and Marine Corps,Civilians,360000
+1964,Navy and Marine Corps,Civilians,347000
+1965,Navy and Marine Corps,Civilians,343000
+1966,Navy and Marine Corps,Civilians,367000
+1967,Navy and Marine Corps,Civilians,416000
+1968,Navy and Marine Corps,Civilians,429000
+1969,Navy and Marine Corps,Civilians,438000
+1970,Navy and Marine Corps,Civilians,388000
+1971,Navy and Marine Corps,Civilians,362000
+1972,Navy and Marine Corps,Civilians,353000
+1973,Navy and Marine Corps,Civilians,334000
+1974,Navy and Marine Corps,Civilians,335000
+1975,Navy and Marine Corps,Civilians,326000
+1976,Navy and Marine Corps,Civilians,321000
+1977,Navy and Marine Corps,Civilians,318000
+1978,Navy and Marine Corps,Civilians,317000
+1979,Navy and Marine Corps,Civilians,310000
+1980,Navy and Marine Corps,Civilians,309000
+1981,Navy and Marine Corps,Civilians,321000
+1982,Navy and Marine Corps,Civilians,319000
+1983,Navy and Marine Corps,Civilians,339000
+1984,Navy and Marine Corps,Civilians,342000
+1985,Navy and Marine Corps,Civilians,353000
+1986,Navy and Marine Corps,Civilians,342000
+1987,Navy and Marine Corps,Civilians,353000
+1988,Navy and Marine Corps,Civilians,348000
+1989,Navy and Marine Corps,Civilians,354000
+1990,Navy and Marine Corps,Civilians,341000
+1991,Navy and Marine Corps,Civilians,329000
+1992,Navy and Marine Corps,Civilians,309000
+1993,Navy and Marine Corps,Civilians,285000
+1994,Navy and Marine Corps,Civilians,269000
+1995,Navy and Marine Corps,Civilians,249000
+1996,Navy and Marine Corps,Civilians,240000
+1997,Navy and Marine Corps,Civilians,223000
+1998,Navy and Marine Corps,Civilians,210000
+1999,Navy and Marine Corps,Civilians,204000
+2000,Navy and Marine Corps,Civilians,197000
+2001,Navy and Marine Corps,Civilians,194000
+2002,Navy and Marine Corps,Civilians,195000
+2003,Navy and Marine Corps,Civilians,198000
+2004,Navy and Marine Corps,Civilians,195000
+2005,Navy and Marine Corps,Civilians,190000
+2006,Navy and Marine Corps,Civilians,189000
+2007,Navy and Marine Corps,Civilians,187000
+2008,Navy and Marine Corps,Civilians,189000
+2009,Navy and Marine Corps,Civilians,197000
+2010,Navy and Marine Corps,Civilians,209000
+2011,Navy and Marine Corps,Civilians,212000
+2012,Navy and Marine Corps,Civilians,213000
+2013,Navy and Marine Corps,Civilians,208000
+2014,Navy and Marine Corps,Civilians,193000
+2015,Navy and Marine Corps,Civilians,199000
+2016,Navy and Marine Corps,Civilians,204000
+2017,Navy and Marine Corps,Civilians,206000
+2018,Navy and Marine Corps,Civilians,209000
+2019,Navy and Marine Corps,Civilians,218000
+2020,Navy and Marine Corps,Civilians,221000
+2021,Navy and Marine Corps,Civilians,222000
+2022,Navy and Marine Corps,Civilians,223000
+NA,Navy and Marine Corps,Civilians,NA
+1940,Air Force,Civilians,0
+1941,Air Force,Civilians,0
+1942,Air Force,Civilians,0
+1943,Air Force,Civilians,0
+1944,Air Force,Civilians,0
+1945,Air Force,Civilians,0
+1946,Air Force,Civilians,0
+1947,Air Force,Civilians,0
+1948,Air Force,Civilians,152000
+1949,Air Force,Civilians,166000
+1950,Air Force,Civilians,154000
+1951,Air Force,Civilians,261000
+1952,Air Force,Civilians,310000
+1953,Air Force,Civilians,382000
+1954,Air Force,Civilians,371000
+1955,Air Force,Civilians,397000
+1956,Air Force,Civilians,333000
+1957,Air Force,Civilians,417000
+1958,Air Force,Civilians,373000
+1959,Air Force,Civilians,364000
+1960,Air Force,Civilians,355000
+1961,Air Force,Civilians,346000
+1962,Air Force,Civilians,349000
+1963,Air Force,Civilians,337000
+1964,Air Force,Civilians,322000
+1965,Air Force,Civilians,317000
+1966,Air Force,Civilians,336000
+1967,Air Force,Civilians,349000
+1968,Air Force,Civilians,339000
+1969,Air Force,Civilians,349000
+1970,Air Force,Civilians,328000
+1971,Air Force,Civilians,313000
+1972,Air Force,Civilians,300000
+1973,Air Force,Civilians,288000
+1974,Air Force,Civilians,289000
+1975,Air Force,Civilians,278000
+1976,Air Force,Civilians,262000
+1977,Air Force,Civilians,255000
+1978,Air Force,Civilians,251000
+1979,Air Force,Civilians,245000
+1980,Air Force,Civilians,244000
+1981,Air Force,Civilians,246000
+1982,Air Force,Civilians,248000
+1983,Air Force,Civilians,251000
+1984,Air Force,Civilians,253000
+1985,Air Force,Civilians,264000
+1986,Air Force,Civilians,263000
+1987,Air Force,Civilians,264000
+1988,Air Force,Civilians,253000
+1989,Air Force,Civilians,261000
+1990,Air Force,Civilians,249000
+1991,Air Force,Civilians,233000
+1992,Air Force,Civilians,214000
+1993,Air Force,Civilians,202000
+1994,Air Force,Civilians,196000
+1995,Air Force,Civilians,186000
+1996,Air Force,Civilians,183000
+1997,Air Force,Civilians,180000
+1998,Air Force,Civilians,174000
+1999,Air Force,Civilians,169000
+2000,Air Force,Civilians,163000
+2001,Air Force,Civilians,160000
+2002,Air Force,Civilians,157000
+2003,Air Force,Civilians,159000
+2004,Air Force,Civilians,160000
+2005,Air Force,Civilians,163000
+2006,Air Force,Civilians,167000
+2007,Air Force,Civilians,163000
+2008,Air Force,Civilians,162000
+2009,Air Force,Civilians,164000
+2010,Air Force,Civilians,172000
+2011,Air Force,Civilians,184000
+2012,Air Force,Civilians,178000
+2013,Air Force,Civilians,180000
+2014,Air Force,Civilians,167000
+2015,Air Force,Civilians,166000
+2016,Air Force,Civilians,167000
+2017,Air Force,Civilians,167000
+2018,Air Force,Civilians,170000
+2019,Air Force,Civilians,172000
+2020,Air Force,Civilians,174000
+2021,Air Force,Civilians,174000
+2022,Air Force,Civilians,176000
+NA,Air Force,Civilians,NA
+1940,Space.Force,Civilians,0
+1941,Space.Force,Civilians,0
+1942,Space.Force,Civilians,0
+1943,Space.Force,Civilians,0
+1944,Space.Force,Civilians,0
+1945,Space.Force,Civilians,0
+1946,Space.Force,Civilians,0
+1947,Space.Force,Civilians,0
+1948,Space.Force,Civilians,NA
+1949,Space.Force,Civilians,NA
+1950,Space.Force,Civilians,NA
+1951,Space.Force,Civilians,NA
+1952,Space.Force,Civilians,NA
+1953,Space.Force,Civilians,NA
+1954,Space.Force,Civilians,NA
+1955,Space.Force,Civilians,NA
+1956,Space.Force,Civilians,NA
+1957,Space.Force,Civilians,NA
+1958,Space.Force,Civilians,NA
+1959,Space.Force,Civilians,NA
+1960,Space.Force,Civilians,NA
+1961,Space.Force,Civilians,NA
+1962,Space.Force,Civilians,NA
+1963,Space.Force,Civilians,NA
+1964,Space.Force,Civilians,NA
+1965,Space.Force,Civilians,NA
+1966,Space.Force,Civilians,NA
+1967,Space.Force,Civilians,NA
+1968,Space.Force,Civilians,NA
+1969,Space.Force,Civilians,NA
+1970,Space.Force,Civilians,NA
+1971,Space.Force,Civilians,NA
+1972,Space.Force,Civilians,NA
+1973,Space.Force,Civilians,NA
+1974,Space.Force,Civilians,NA
+1975,Space.Force,Civilians,NA
+1976,Space.Force,Civilians,NA
+1977,Space.Force,Civilians,NA
+1978,Space.Force,Civilians,NA
+1979,Space.Force,Civilians,NA
+1980,Space.Force,Civilians,NA
+1981,Space.Force,Civilians,NA
+1982,Space.Force,Civilians,NA
+1983,Space.Force,Civilians,NA
+1984,Space.Force,Civilians,NA
+1985,Space.Force,Civilians,NA
+1986,Space.Force,Civilians,NA
+1987,Space.Force,Civilians,NA
+1988,Space.Force,Civilians,NA
+1989,Space.Force,Civilians,NA
+1990,Space.Force,Civilians,NA
+1991,Space.Force,Civilians,NA
+1992,Space.Force,Civilians,NA
+1993,Space.Force,Civilians,NA
+1994,Space.Force,Civilians,NA
+1995,Space.Force,Civilians,NA
+1996,Space.Force,Civilians,NA
+1997,Space.Force,Civilians,NA
+1998,Space.Force,Civilians,NA
+1999,Space.Force,Civilians,NA
+2000,Space.Force,Civilians,NA
+2001,Space.Force,Civilians,NA
+2002,Space.Force,Civilians,NA
+2003,Space.Force,Civilians,NA
+2004,Space.Force,Civilians,NA
+2005,Space.Force,Civilians,NA
+2006,Space.Force,Civilians,NA
+2007,Space.Force,Civilians,NA
+2008,Space.Force,Civilians,NA
+2009,Space.Force,Civilians,NA
+2010,Space.Force,Civilians,NA
+2011,Space.Force,Civilians,NA
+2012,Space.Force,Civilians,NA
+2013,Space.Force,Civilians,NA
+2014,Space.Force,Civilians,NA
+2015,Space.Force,Civilians,NA
+2016,Space.Force,Civilians,NA
+2017,Space.Force,Civilians,NA
+2018,Space.Force,Civilians,NA
+2019,Space.Force,Civilians,NA
+2020,Space.Force,Civilians,NA
+2021,Space.Force,Civilians,4000
+2022,Space.Force,Civilians,4000
+NA,Space.Force,Civilians,NA
+1940,Defense Agencies,Civilians,0
+1941,Defense Agencies,Civilians,0
+1942,Defense Agencies,Civilians,0
+1943,Defense Agencies,Civilians,0
+1944,Defense Agencies,Civilians,0
+1945,Defense Agencies,Civilians,0
+1946,Defense Agencies,Civilians,0
+1947,Defense Agencies,Civilians,0
+1948,Defense Agencies,Civilians,1000
+1949,Defense Agencies,Civilians,2000
+1950,Defense Agencies,Civilians,2000
+1951,Defense Agencies,Civilians,2000
+1952,Defense Agencies,Civilians,2000
+1953,Defense Agencies,Civilians,2000
+1954,Defense Agencies,Civilians,2000
+1955,Defense Agencies,Civilians,2000
+1956,Defense Agencies,Civilians,2000
+1957,Defense Agencies,Civilians,2000
+1958,Defense Agencies,Civilians,2000
+1959,Defense Agencies,Civilians,2000
+1960,Defense Agencies,Civilians,2000
+1961,Defense Agencies,Civilians,2000
+1962,Defense Agencies,Civilians,20000
+1963,Defense Agencies,Civilians,32000
+1964,Defense Agencies,Civilians,38000
+1965,Defense Agencies,Civilians,42000
+1966,Defense Agencies,Civilians,69000
+1967,Defense Agencies,Civilians,76000
+1968,Defense Agencies,Civilians,75000
+1969,Defense Agencies,Civilians,72000
+1970,Defense Agencies,Civilians,68000
+1971,Defense Agencies,Civilians,63000
+1972,Defense Agencies,Civilians,60000
+1973,Defense Agencies,Civilians,72000
+1974,Defense Agencies,Civilians,75000
+1975,Defense Agencies,Civilians,73000
+1976,Defense Agencies,Civilians,72000
+1977,Defense Agencies,Civilians,77000
+1978,Defense Agencies,Civilians,77000
+1979,Defense Agencies,Civilians,77000
+1980,Defense Agencies,Civilians,77000
+1981,Defense Agencies,Civilians,80000
+1982,Defense Agencies,Civilians,82000
+1983,Defense Agencies,Civilians,83000
+1984,Defense Agencies,Civilians,87000
+1985,Defense Agencies,Civilians,92000
+1986,Defense Agencies,Civilians,94000
+1987,Defense Agencies,Civilians,98000
+1988,Defense Agencies,Civilians,96000
+1989,Defense Agencies,Civilians,99000
+1990,Defense Agencies,Civilians,103000
+1991,Defense Agencies,Civilians,117000
+1992,Defense Agencies,Civilians,149000
+1993,Defense Agencies,Civilians,156000
+1994,Defense Agencies,Civilians,156000
+1995,Defense Agencies,Civilians,147000
+1996,Defense Agencies,Civilians,138000
+1997,Defense Agencies,Civilians,136000
+1998,Defense Agencies,Civilians,126000
+1999,Defense Agencies,Civilians,120000
+2000,Defense Agencies,Civilians,117000
+2001,Defense Agencies,Civilians,113000
+2002,Defense Agencies,Civilians,111000
+2003,Defense Agencies,Civilians,107000
+2004,Defense Agencies,Civilians,108000
+2005,Defense Agencies,Civilians,108000
+2006,Defense Agencies,Civilians,107000
+2007,Defense Agencies,Civilians,107000
+2008,Defense Agencies,Civilians,110000
+2009,Defense Agencies,Civilians,115000
+2010,Defense Agencies,Civilians,121000
+2011,Defense Agencies,Civilians,127000
+2012,Defense Agencies,Civilians,134000
+2013,Defense Agencies,Civilians,129000
+2014,Defense Agencies,Civilians,189000
+2015,Defense Agencies,Civilians,187000
+2016,Defense Agencies,Civilians,189000
+2017,Defense Agencies,Civilians,191000
+2018,Defense Agencies,Civilians,193000
+2019,Defense Agencies,Civilians,216000
+2020,Defense Agencies,Civilians,220000
+2021,Defense Agencies,Civilians,214000
+2022,Defense Agencies,Civilians,215000
+NA,Defense Agencies,Civilians,NA

@@ -1,68 +1,55 @@
-#' Original DoD Comptroller zip file downloaded here:
-#' http://comptroller.defense.gov/BudgetMaterials.aspx
-#' To View as pd:
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY19_Green_Book.pdf
-#' 
-#' To download as zip
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip
-#' 
+
 #' Table 7.5 End Strength FTEs
 #' 
+# How to Update this File -------------------------------------------------
+#' 
+#'   Set working Directory to current year:
+          setwd("./DOD-Green-Book/FY2022")
+#'   
+#'   Update name of Chapter 7 raw data folder, files
+          raw.data.folder <- "./Data/Raw/"
+#' 
+#'   Update Name of specific files
+          my.filename <- "FY22 PB Green Book Chap 7.xlsx"
+          
+# Shape data
+my.data.rows <- c(6:89)
+my.data.cols <- c(1,3:8, 10:14)
+
 # Libraries ---------------------------------------------------------------
 
 library(tidyverse)
 library(readxl)
-library(stringr)
-library(nettles.toolbox)
 
 #' # Import  Data ------------------------------------------------------------
-x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip"
-y <- "FY19 PB Green Book Chap 7.xlsx"
-
-
-nettle_downzip <- function(zip.url, zip.file){
-    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
-    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
-    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
-    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
-    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
-    return(location.of.unzipped.file )
-    }
-
-my.filename <- nettle_downzip(x,y)
+my.filename <- paste0(raw.data.folder,my.filename)
 
 end.strength <- read_excel(my.filename,'7-5')
 
 # Shape Dataset: This Varies from year to to year!
-end.strength.data <- end.strength[c(5:83, 86, 89), c(1,3:7, 9:12)]
+end.strength <- end.strength[my.data.rows, my.data.cols]
 
-
-# Names
-
-names(end.strength.data) <- c(
+names(end.strength) <- c(
   "FY",
   "Army,Active",
   "Navy,Active",
   "Marine Corps,Active",
   "Air Force,Active",
+  "Space Force,Active",
   "Full Time Guard and Reserve,Active",
-  "Army, Civilians",
+  "Army,Civilians",
   "Navy and Marine Corps,Civilians",
   "Air Force,Civilians",
-  "Defense Agencies,Civilians"
-        )
-end.strength.data <- end.strength.data[-1,]
-
+  "Space.Force,Civilians",
+  "Defense Agencies,Civilians")
+        
 
 # Tidy
-end.strength.data.tdy <- gather(end.strength.data, Service, Personnel, -FY)
-#View(end.strength.data.tdy)
+end.strength.data.tdy <- gather(end.strength, Service, Personnel, -FY)
 
-# Remove Dots, Trim, Remove "Total" text
-end.strength.data.tdy$FY <-  str_replace_all(end.strength.data.tdy$FY, "[.]","")
-end.strength.data.tdy$FY <- str_trim(end.strength.data.tdy$FY, "both")
-end.strength.data.tdy$FY <- str_sub(end.strength.data.tdy$FY, start = 1, end = 4)
-     
+end.strength.data.tdy <-end.strength.data.tdy %>% 
+  mutate(FY = str_extract(FY, "[0-9]{4}") )
+
 #Convert to Numerics
 end.strength.data.tdy$Personnel <- as.numeric(end.strength.data.tdy$Personnel)
 end.strength.data.tdy <- end.strength.data.tdy %>% 
