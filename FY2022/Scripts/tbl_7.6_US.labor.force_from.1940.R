@@ -31,15 +31,15 @@ library(stringr)
 #'   -> Download Comptroller data to Raw folder (manually).
 #'
 #'  -> Identify current year
-       current.fy <- 2021  
+       current.fy <- 2022
 #'  
 #'  
 #'   -> Change year, verify file prefix (names generated automatically in tibble)
-        raw.filename <- "./Data/Raw/FY21 PB Green Book Chap 7.xlsx"
+        raw.filename <- "./Data/Raw/FY22 PB Green Book Chap 7.xlsx"
         tab.name     <- "7-6"
 #'
 #'   ->Set working Directory to current year:
-        setwd("./DOD-Green-Book/FY2021")
+        setwd("./DOD-Green-Book/FY2022")
         
 #'   -> Verify Export name
         export.filename <- "tbl_7.6_total.us.labor.force"  
@@ -50,7 +50,7 @@ library(stringr)
       #' Verify Tables #-#-#-#-#-#-#
       #' 
               #'  Tables 7.6
-                      my.colrange <- c( 7:13)  #<-- Current dataset
+                      my.colrange <- c( 1,3:15)  #<-- Current dataset
 
                       my.colnames <- c (    "FY",
                                             "active.duty.military",
@@ -85,7 +85,7 @@ df.1 <- read_excel(raw.filename,
                    col_names=F) 
 
 # Reshaping ---------------------------------------------------------------
-df.1 <- df.1[,-2]
+df.1 <- df.1[,my.colrange]
                       
 df.1 <- df.1[grepl("^[0-9]{4}", df.1$...1) & 
         !grepl(".*(Base|OCO)", df.1$...1), ]  
@@ -97,8 +97,8 @@ names(df.1) <- my.colnames
 #remove columns with Total in name
 df.1 <- df.1[, !grepl("total", names(df.1) ) ]
 
-#remove untrustworthy us.unemployment
-df.1 <- df.1[, !grepl("us.unemployment", names(df.1) ) ]
+# #remove untrustworthy us.unemployment
+ df.1 <- df.1[, !grepl("us.unemployment", names(df.1) ) ]
 
 # NAs to zeros
 df.1[is.na(df.1)] <- 0
@@ -108,6 +108,8 @@ df.2 <- gather(df.1, key = employment.category,
                value = amount, 
                -FY) %>% 
         mutate(amount = amount *1e3)
+
+
 
 final.df <- df.2
 
