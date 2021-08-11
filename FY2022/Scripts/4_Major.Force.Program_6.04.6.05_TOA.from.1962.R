@@ -5,19 +5,19 @@
 #' # How to Update this File -------------------------------------------------
 #' 
 #'   Set working Directory to current year:
-          setwd("./DOD-Green-Book/FY2021")
+          setwd("./DOD-Green-Book/FY2022")
 #' 
 #'   Download Comptroller data to Raw folder (manually).
 #'   
 #'   Update name of Chapter 6 raw data folder, files
-          chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
+          chapter.6.raw.data.folder <- "./Data/Raw/FY22 PB Green Book Chap 6/"
 #' 
 #'   Update Name of specific files
-          my.filename.1 <- "FY21 PB Green Book Table 6-4.xlsx"
-          my.filename.2 <- "FY21 PB Green Book Table 6-5.xlsx"
+          my.filename.1 <- "FY22 PB Green Book Table 6-4.xlsx"
+          my.filename.2 <- "FY22 PB Green Book Table 6-5.xlsx"
           
 #'   Set current year
-          current.FY <- 2021
+          current.FY <- 2022
 
 #'First row of data (not colheader)
   first.row.of.data <- 6 
@@ -42,9 +42,7 @@
                              "support.of.other.nations",
                              "special.operations.forces",
                              "space",
-                             "OCO.placeholder",
-                             "other"
-                             )  
+                             "non.MFP")  
 
 #'  Preferred Export filename
     export.filename <- "4_Major.Force.Program.since.1962_TOA"
@@ -66,8 +64,7 @@ import.file.name.2 <- paste0(chapter.6.raw.data.folder,
 #ranges
   row.limit <- ( (current.FY + 4) - 1962) + first.row.of.data #<-begin in FY1962 
   my.range <- str_c("A",first.row.of.data, 
-                    ":", 
-                    "P", row.limit)
+                    ":","O", row.limit)
 
 # export labelling
 mylocation <- "./Data/Processed"
