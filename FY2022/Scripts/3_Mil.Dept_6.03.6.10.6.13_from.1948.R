@@ -12,20 +12,19 @@
 #'   Download Comptroller data to Raw folder (manually).
 #'
 #'   Set working Directory to current year:
-        setwd("./DOD-Green-Book/FY2021")
+        setwd("./DOD-Green-Book/FY2022")
 #'
 #'   Chapter 6 raw data folder, files
-        chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
+        chapter.6.raw.data.folder <- "./Data/Raw/FY22 PB Green Book Chap 6/"
 #' 
 #'  Identify rows for constant and current
-        row.range <-  c( 7:11, #<--  Current
-                        14:18) #<--  Curent Non.Pay
+        row.range <-  c( 7:10, #<--  Current
+                        13:16) #<--  Curent Non.Pay
 
         row.names <-  rep(c("army",
                              "navy",
                              "air.force",
-                             "defense.wide",
-                             "OCO.place.holder"),
+                             "defense.wide"),
                                            2)
 #' name of first column
         first.col.name <- "military.dept"
@@ -37,9 +36,9 @@
 #' #-#-#-#-#-#-# Indvidual File Info May Change #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 #'       Update Name of specific files
-         my.filename.1 <- "FY21 PB Green Book Table 6-3.xlsx" #<--   TOA by military dept
-         my.filename.2 <- "FY21 PB Green Book Table 6-10.xlsx" #<--  BA by military dept
-         my.filename.3 <- "FY21 PB Green Book Table 6-13.xlsx" #<--  Outlays by military dept
+         my.filename.1 <- "FY22 PB Green Book Table 6-3.xlsx" #<--   TOA by military dept
+         my.filename.2 <- "FY22 PB Green Book Table 6-10.xlsx" #<--  BA by military dept
+         my.filename.3 <- "FY22 PB Green Book Table 6-13.xlsx" #<--  Outlays by military dept
 
  #'       Update Name of specific files
          budget.type.1        <-     "TOA"
@@ -88,7 +87,7 @@ clean.function <- function(
           df.1[,1] <- valid.row.names
 
           # NAs to zeros
-          df.1[is.na(df.1)] <- 0
+          df.1[is.na(df.1)] <- "0"
 
       #Add meta cols-#-#-#-#-#-#-#--#-#-#--#-#-#-
           
