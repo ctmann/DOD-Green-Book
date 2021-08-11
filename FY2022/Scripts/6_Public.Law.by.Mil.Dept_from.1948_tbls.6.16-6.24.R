@@ -28,10 +28,10 @@ library(stringr)
 #'   -> Download Comptroller data to Raw folder (manually).
 #'
 #'   -> Change year, verify file prefix (names generated automatically in tibble)
-        filename.prefix <- "./Data/Raw/FY21 PB Green Book Chap 6/FY21 PB Green Book Table 6-"
+        filename.prefix <- "./Data/Raw/FY22 PB Green Book Chap 6/FY22 PB Green Book Table 6-"
 #'
 #'   ->Set working Directory to current year:
-        setwd("./DOD-Green-Book/FY2021")
+        setwd("./DOD-Green-Book/FY2022")
         
 #'   -> Verify Export name
         export.filename <- "6_Public.Law.by.Mil.Dept.since.1948_BA.Outlays.TOA"  
@@ -56,8 +56,8 @@ library(stringr)
       #'
       #'                                
               #' Tables 6.19, 6.20, 6.21 BA
-                      ba.rowrange <- c( 7:14,  #<-- Current dataset
-                                       17:24) #<--  Constant dataset
+                      ba.rowrange <- c( 7:13,  #<-- Current dataset
+                                       16:22) #<--  Constant dataset
                       
                       ba.rownames <- rep(c("MILPERS",
                                             "OM",
@@ -65,8 +65,7 @@ library(stringr)
                                             "RDTE",
                                             "MILCON",
                                             "family.housing",
-                                            "revolving.and.management",
-                                            "trust.receipts.and.other"), #<- New line!
+                                            "revolving.and.management"),
                                                          2)
       #'
       #'                                
@@ -74,14 +73,15 @@ library(stringr)
                       outlays.rowrange <- c( 7:14,  #<-- Current dataset
                                             17:24) #<--  Constant dataset
                       
-                      outlays.rownames <- rep(c("MILPERS",
+                      outlays.rownames <- rep(
+                                            c("MILPERS",
                                             "OM",
                                             "Procurement",
                                             "RDTE",
                                             "MILCON",
                                             "family.housing",
                                             "revolving.and.management",
-                                            "trust.receipts.and.other"), #<- New line!
+                                            "trust.receipts.and.other"), 
                                                          2) 
       #'
               #' Verify 
@@ -140,7 +140,7 @@ colnames(df.1) <- c("public.law.title",            #<First col is public law tit
 df.1[,1] <- unlist(my.rownames)
 
 # NAs to zeros
-df.1[is.na(df.1)] <- 0
+df.1[is.na(df.1)] <- '0'
 
 
 #Add meta cols-#-#-#-#-#-#-#--#-#-#--#-#-#-
