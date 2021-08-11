@@ -6,7 +6,7 @@
 #'
 #' #-#-#-#-#-#-# CHANGE #-#-#-#-#-#-#-#-#-#-#-#-#-#
       
-    current.FY <- 2020
+    current.FY <- 2022
     first.row.of.data <- 6 #omit col.header
 #'
 #' #-#-#-#-#-#-# THIS WILL NOT CHANGE #-#-#-#-#-#-#-#-#-#-#-#-#-#
@@ -14,10 +14,10 @@
 #'   Download Comptroller data to Raw folder (manually).
 #'
 #'   Set working Directory to current year:
-        setwd("./DOD-Green-Book/FY2021")
+        setwd("./DOD-Green-Book/FY2022")
 #'
 #'   Chapter 6 raw data folder, files
-        chapter.6.raw.data.folder <- "./Data/Raw/FY21 PB Green Book Chap 6/"
+        chapter.6.raw.data.folder <- "./Data/Raw/FY22 PB Green Book Chap 6/"
 #' 
 #'  Identify rows for constant and current
         col.names <- c(     "fy",
@@ -32,8 +32,8 @@
 #' #-#-#-#-#-#-# This MAY change  #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 
 #'       Update Name of specific files
-         my.filename.1 <- "FY21 PB Green Book Table 6-14.xlsx" #<-- current
-         my.filename.2 <- "FY21 PB Green Book Table 6-15.xlsx" #<-- constant
+         my.filename.1 <- "FY22 PB Green Book Table 6-14.xlsx" #<-- current
+         my.filename.2 <- "FY22 PB Green Book Table 6-15.xlsx" #<-- constant
          
 #       columns to be omitted (NA, total cols)
          omit.these.cols <- c(-2, #NAs
