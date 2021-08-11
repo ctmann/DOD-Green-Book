@@ -4,7 +4,7 @@
 #' Table 2.1 Base Budget, War Funding and Supplementals by Military Department, by P.L. Title
 #' (Discretionary Budget Authority)
 #' 
-#' Updated: 05-01-2020 fo FY2021
+#' Updated: August 11, 2021 for FY2022
 #' 
 # Libraries ---------------------------------------------------------------
 
@@ -21,7 +21,7 @@ library(zoo)
 # Set working dir manually
 
 # Download new raw data?
-  download.switch <- "download.switch.on"
+  #download.switch <- "download.switch.on"
   download.switch <- "download.switch.off"
 
 # Import  Data from Website------------------------------------------------------------
@@ -58,12 +58,15 @@ t <-  lapply(excel_sheets(my.filename)[1:18],
 tidy_grnbook_supps_table <- function(t){
   
   # Deprecated: Remove 5 rows at top of each sheet using read_excel 'skip' argument
-  # t <- (t[-1:-5,])
+   #t <- (t[-1:-5,])
   
 #t <- t[[1]]
     
   # Create Missing Colnames
-  t[1, 1:3] <- c("Military.Department", "FY", "Account")
+ # t[1, 1:3] <- c("Military.Department", "FY", "Account")
+  t[1,1] <- "Military.Department"
+  t[1,2] <- "FY"
+  t[1,3] <- "Account"
   
   # Set all Colnames and remove extra row (there ought to be a function that does this)
   colnames(t) <- t[1,]
