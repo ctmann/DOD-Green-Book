@@ -1,42 +1,28 @@
-#' Original DoD Comptroller zip file downloaded here:
-#' http://comptroller.defense.gov/BudgetMaterials.aspx
-#' To View as pd:
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY19_Green_Book.pdf
+#' # How to Update this File -------------------------------------------------
 #' 
-#' To download as zip
-#' http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip
+#'   Set working Directory to current year:
+          setwd("./DOD-Green-Book/FY2022")
+#'   
+#'   Update name of Chapter 6 raw data folder, files
+          raw.data.folder <- "./Data/Raw/"
 #' 
+#'   Update Name of specific files
+          my.filename <- "FY22 PB Green Book Chap 5.xlsx"
 
 #' #' Table 5-1: Department of Defense and Selected Economy-Wide Indices
 #' (1970-2022)
-#' Base Year = 2019
+#' Base Year = 2022
 #' 
 # Libraries ---------------------------------------------------------------
 
-library(tidyr)
-library(dplyr)
+library(tidyverse)
 library(readxl)
 library(zoo)
-library(stringr)
-library(readr)
-library(ggplot2)
-library(readr)
+
 
 #' # Import  Data ------------------------------------------------------------
 
-x <- "http://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2019/FY_2019_Green_Book.zip"
-y <- "FY19 PB Green Book Chap 5.xlsx" 
-
-nettle_downzip <- function(zip.url, zip.file){
-    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
-    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
-    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
-    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
-    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
-    return(location.of.unzipped.file )
-    }
-
-my.filename <- nettle_downzip(x,y)
+my.filename <- paste0(raw.data.folder,my.filename)
 
 # Import tbl 5-1 on sheet 1 of workbook
 econ.deflator <- read_excel(path = my.filename, sheet = 1, skip = 3)
@@ -52,12 +38,8 @@ econ.deflator <- read_excel(path = my.filename, sheet = 1, skip = 3)
   econ.deflator <- econ.deflator %>% 
     select(1,3:7)
   
-  # Shape the Length: omit bottom notes (save notes for later)
-  # Save Notes
-  #econ.deflator.notes <- econ.deflator[54:56,1]
-  
   # Cut off bottom rows
-  econ.deflator <- econ.deflator[1:54,]
+  econ.deflator <- econ.deflator[1:57,]
   
   # Convert to Table df
   econ.deflator <- tbl_df(econ.deflator)
@@ -66,7 +48,7 @@ econ.deflator <- read_excel(path = my.filename, sheet = 1, skip = 3)
 # Remove dots and spaces, convert to factor
   econ.deflator$Fiscal.Year <- as.factor(str_replace_all(econ.deflator$Fiscal.Year, "[ ,.]", ""))
   
-# Rename FY with dplyr! Awesome. (note..the new variable precedes the old one)
+# Rename 
   econ.deflator <- rename(econ.deflator, FY = Fiscal.Year)
 
 # Add 'No Deflator' Column
@@ -82,12 +64,6 @@ econ.deflator$No.Deflator <- 100
   econ.deflator$Deflator.Source <- "Table 5-1: Department of Defense and Selected Economy-Wide Indices"
 
 
-# Assign Notes
-econ.deflator <- econ.deflator %>% 
-  mutate(Deflator.Notes = ifelse(grepl("Gross.Domestic.Product1", econ.deflator$econ.deflator.name), yes = as.character(econ.deflator.notes[1,1]), 
-                 ifelse(grepl("Consumer.Price.Index..CPI.W.2", econ.deflator.name), yes = as.character(econ.deflator.notes[2,1]),
-                 ifelse(grepl("Dept.of.Defense.Purchases3", econ.deflator.name), yes = as.character(econ.deflator.notes[3,1]), no = "None")))) 
-         
 # Remove numbers the name column
 econ.deflator$econ.deflator.name <- str_replace_all(econ.deflator$econ.deflator.name, "[0-9]", "")
 
