@@ -18,8 +18,8 @@
         chapter.6.raw.data.folder <- "./Data/Raw/FY22 PB Green Book Chap 6/"
 #' 
 #'  Identify rows for constant and current
-        row.range <- c( 7:16,    #<- Current
-                       19:28)    #<- Constant 
+        row.range <- c( 7:15,    #<- Current
+                       18:26)    #<- Constant 
 
         row.names <-  rep(c( "military.personnel",
                              "retired.pay.Defense",
@@ -29,9 +29,7 @@
                              "MILCON",
                              "family.housing",
                              "revolving.and.management.funds",
-                             "trust.receipts.and.other",
-                             "OCO.placeholder"
-                             ), 2) 
+                             "trust.receipts.and.other"), 2) 
 
 #' name of first column
         first.col.name <- "public.law.title"
