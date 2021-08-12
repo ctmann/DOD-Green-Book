@@ -51,7 +51,7 @@
 #'       Update Name of specific files
          source.table.1       <-     "tbl.6.02.TOA.by.Pay.Category" 
          source.table.2       <-     "tbl.6.09.BA.by.Pay.Category" 
-         source.table.3       <-     "tbl.6.12.BA.by.Pay.Category" 
+         source.table.3       <-     "tbl.6.12.Outlays.by.Pay.Category" 
         
                 
 # Libraries ---------------------------------------------------------------
