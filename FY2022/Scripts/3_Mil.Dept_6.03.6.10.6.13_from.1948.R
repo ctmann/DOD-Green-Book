@@ -48,7 +48,7 @@
 #'       Update Name of specific files
          source.table.1       <-     "tbl.6.03.TOA.by.Public.Law" 
          source.table.2       <-     "tbl.6.10.BA.by.Public.Law" 
-         source.table.3       <-     "tbl.6.13.BA.by.Public.Law" 
+         source.table.3       <-     "tbl.6.13.Outlays.by.Public.Law" 
 
 # Libraries ---------------------------------------------------------------
 library(tidyverse)
