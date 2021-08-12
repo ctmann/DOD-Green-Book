@@ -41,7 +41,7 @@ library(stringr)
 #' 
       #' Verify Tables #-#-#-#-#-#-#
       #' 
-              #'  Tables 6.16, 6.17, 6.18 TOA
+              #'  Tables 6.16, 6.17, 6.18 TOA  (no trust receipts)
                       toa.rowrange <- c( 7:13,  #<-- Current dataset
                                         16:22) #<--  Constant dataset
               
@@ -54,21 +54,7 @@ library(stringr)
                                             "revolving.and.management"),
                                            2)
       #'
-      #'                                
-              #' Tables 6.19, 6.20, 6.21 BA
-                      ba.rowrange <- c( 7:13,  #<-- Current dataset
-                                       16:22) #<--  Constant dataset
-                      
-                      ba.rownames <- rep(c("MILPERS",
-                                            "OM",
-                                            "Procurement",
-                                            "RDTE",
-                                            "MILCON",
-                                            "family.housing",
-                                            "revolving.and.management"),
-                                                         2)
-      #'
-      #'                                
+  
               #' Tables 6.22, 6.23, 6.24 Outlays
                       outlays.rowrange <- c( 7:14,  #<-- Current dataset
                                             17:24) #<--  Constant dataset
@@ -83,6 +69,11 @@ library(stringr)
                                             "revolving.and.management",
                                             "trust.receipts.and.other"), 
                                                          2) 
+                      
+      #'                                
+              #' Tables 6.19, 6.20, 6.21 BA (has trust, receipts)
+                      ba.rowrange <- outlays.rowrange
+                      ba.rownames <- outlays.rownames
       #'
               #' Verify 
                     crs.service     <- c("army","navy","usaf")
