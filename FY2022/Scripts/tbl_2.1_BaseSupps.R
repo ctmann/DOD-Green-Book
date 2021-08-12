@@ -3,72 +3,50 @@
 #' 
 #' Table 2.1 Base Budget, War Funding and Supplementals by Military Department, by P.L. Title
 #' (Discretionary Budget Authority)
-#' 
-#' Updated: August 11, 2021 for FY2022
-#' 
-# Libraries ---------------------------------------------------------------
 
-library(tidyr)
-library(dplyr)
-library(readxl)
-library(stringr)
-library(readr)
+# Libraries ---------------------------------------------------------------
+library(tidyverse)
 library(readxl)
 library(zoo)
 
+# How to Update this File -------------------------------------------------
+#'   Set working Directory to current year
+        setwd("./DOD-Green-Book/FY2022")
+#'
+#'   Manually download Comptroller data to Raw data folder 
+#'
+#'   Identify file
+        my.filename <- "./Data/Raw/FY22 PB Green Book Chap 2.xlsx"
+#'
+#' Importing Values: Describe file datashape
+#'   How many sheets are there?        
+        my.sheets <- 18
+#'   How many blank rows before header row?
+        skip.rows <- 5
+        
+#' Identify table
+   source.table <- "FY22 Green Book, tbl 2.1"
+        
+# Import ------------------------------------------------------------------
 
-# Preliminaries -----------------------------------------------------------
-# Set working dir manually
-
-# Download new raw data?
-  #download.switch <- "download.switch.on"
-  download.switch <- "download.switch.off"
-
-# Import  Data from Website------------------------------------------------------------
-
-x <- "https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2021/FY_2021_Green_Book.zip"
-y <- "FY21 PB Green Book Chap 2.xlsx" 
-
-nettle_downzip <- function(zip.url, zip.file){
-    my.temporary.zipped.file <- tempfile()   # Zip file will go in here
-    my.temporarary.zipped.folder <- tempdir() # Unzipped file will go in here
-    download.file(zip.url, dest = my.temporary.zipped.file) # Download Source Data to Temp file
-    unzip(my.temporary.zipped.file, exdir = my.temporarary.zipped.folder) # Unzip to Temp directory
-    location.of.unzipped.file <- paste0(my.temporarary.zipped.folder,"/", zip.file)
-    return(location.of.unzipped.file )
-    }
-
-my.filename <- nettle_downzip(x,y)
-#excel_sheets(my.filename)
-
-# Reshape -----------------------------------------------------------------
 
 #Import  There are 18 sheet
-t <-  lapply(excel_sheets(my.filename)[1:18], 
+t <-  lapply(excel_sheets(my.filename)[1:my.sheets], 
              read_excel, 
              path = my.filename, 
              col_names = F, 
-             skip = 5 )
+             skip = skip.rows )
 
 #' User Defined Cleaning Function ---------------------------------------------------
-#' Purpose:Create function that cleans and tidies
-#' Note: Rather than removing cols, SELECT them by colname. Sometimes, one sheet will 
-#' have extra blank cols not included on others that widens orlengthens the array.
 
 tidy_grnbook_supps_table <- function(t){
   
-  # Deprecated: Remove 5 rows at top of each sheet using read_excel 'skip' argument
-   #t <- (t[-1:-5,])
-  
-#t <- t[[1]]
-    
   # Create Missing Colnames
- # t[1, 1:3] <- c("Military.Department", "FY", "Account")
   t[1,1] <- "Military.Department"
   t[1,2] <- "FY"
   t[1,3] <- "Account"
   
-  # Set all Colnames and remove extra row (there ought to be a function that does this)
+  # Colnames using baseR
   colnames(t) <- t[1,]
   t <- t[-1,]
   
@@ -79,10 +57,10 @@ tidy_grnbook_supps_table <- function(t){
   t <- t[, c(1:3, 5:11)]
 
   # Forward Fill for first two columns (Military Dept, and FY)
-   t[1,2] <- t[2,2] #< Modified in FY2020 ***
+   t[1,2] <- t[2,2] 
   t[,c(1:2)] <- na.locf(t[,c('Military.Department', 'FY')])
   
-  # DANGER! Remove rows that contain a NA in the Public Law Title column
+  # DANGER! Remove rows that contain a NA in the Account column
   t <- t[complete.cases(t$Account),]
   
   # Remove non-alphabetic characters from Public.Law.Title column numbers and periods
@@ -106,18 +84,7 @@ tidy_grnbook_supps_table <- function(t){
   # This dataset was originally adjusted to be "in millions." Mulitply for unadjusted amount
   t$Amount <- t$Amount * 1e6
   
-  ##### PreCalculated Totals ####
-  #' The original dataset contains hard-coded totals which do not match real calculated totals
-  #' should be removed but can be useful for checking the accuracy of this script:
-  
-  # Remove precalculated totals but save the subset for future use
-  # Save Totals Subset - This doesn't seem to work outside of the function
-  #precalculated_totals <- t %>% 
-   # filter(grepl("total", t$Military.Department, ignore.case = T))
-   
   # Remove  published "Totals" Column
-  # Note: Published totals are consistently $1-2 million off from caluclated totals
-  # For more info, see checksums script
     t <- t %>% 
     filter(!grepl("total", t$Military.Department, ignore.case = T))
   
@@ -143,12 +110,16 @@ tidy_grnbook_supps_table <- function(t){
   
   # Assign vars to column  
   t <- t %>% 
-    mutate(spending.type = ifelse(t$Account %in% base, "Base, Discretionary",
-                           ifelse(t$Account %in% OCO.GWOT, "OCO.GWOT",
-                           ifelse(t$Account %in% emergency.relief, "Emergency Relief",
-                           ifelse(t$Account %in% other, "Other Discretionary", "uncategorized")))))   
+    mutate(
+          account.categories = 
+             case_when(
+               str_detect(Account, "Base|Enduring") ~ "base.discretionary",
+               str_detect(Account, "Hurricane|Earthquake|Flu|Ebola|Disaster") ~ "natural.disaster.or.viral",
+               str_detect(Account, "War|Contingency") ~ "OCO.GWOT",
+               TRUE ~ "other") )
+
   # Include Source Column
-  t$Source_Data <- "FY21 Green Book, tbl 2.1"
+  t$Source_Data <- source.table
 
 # Export ------------------------------------------------------------------
 # Export as .csv
